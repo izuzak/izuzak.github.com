@@ -1,10 +1,21 @@
-<!DOCTYPE HTML>
-<html>
-  <head>
-    <title>ivan zuzak, github user page</title>
-  </head>
-  <body>
-    <h1>Ivan Zuzak</h1>
-  <p>For now, only <a href="http://github.com/izuzak">here</a>.</p>
-  </body>
-</html>
+---
+layout: default
+title: Ivan Zuzak
+---
+
+<div id="home">
+  <h1>Blog Posts</h1>
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+
+  <h1>Open Source Projects</h1>
+  <ul class="posts">
+    <li><a href="http://github.com/izuzak/node-revhttpws/">node-revhttpws:</a> Reverse HTTP and WebSockets proxy using NodeJS+WebSockets.</li>
+    <li><a href="http://code.google.com/p/pmrpc/">pmrpc:</a> HTML5 inter-window and web workers RPC and pubsub communication library.</li>
+    <li><a href="http://github.com/izuzak/urlreq/">urlreq:</a> AppEngine HTTP proxy that decodes a HTTP request defined in URL query parameters and makes that request.</li>
+    <li><a href="http://github.com/izuzak/urlecho/">urlecho:</a> Protocol and AppEngine service for echoing a HTTP response defined in the request URL.</li>
+  </ul>
+</div>
