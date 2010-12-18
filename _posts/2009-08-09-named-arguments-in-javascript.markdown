@@ -29,10 +29,11 @@ What I came up with (code presented below) is based on the following:
 	<li>from a dictionary of named arguments, it is possible to construct an array of arguments in the correct order using the parsed representation</li>
 	<li>using the <em>apply </em>method of the Function prototype, it is possible to dynamically call a function, passing an array of arguments instead of an argument list.</li>
 </ol>
-
-
+  
+  
 {% highlight javascript linenos %}
-// calls function fn with context self and parameters defined in dictionary namedParams
+// calls function fn with context self and parameters defined in dictionary
+// namedParams
 function callWithNamedArgs( fn, self, namedParams ) {
   // get string representation of function
   var fnDef = fn.toString();
@@ -63,7 +64,8 @@ function callMe(param1, param2, param3) {
 }
 
 // example invocation with named parameters
-var result = callWithNamedArgs(callMe, this, { 'param3' : 1, 'param1' : 2, 'param2' : 3 });
+var result = callWithNamedArgs(
+               callMe, this, { 'param3' : 1, 'param1' : 2, 'param2' : 3 });
 {% endhighlight %}
 
 This could also have been implemented as a Function prototype method and be called directly on a function object, which would simplify usage since the target function parameter wouldn't have to be passed. But, if the <em>CallWithNamedArgs</em> function indeed was implemented prototype function, could the context parameter be removed also? I.e. is it possible to retrieve the current execution context (<em>this </em>object) of the target function within the <em>CallWithNamedArgs </em>method? The problem is that the execution context within the <em>CallWithNamedArgs method </em>is the Function object on which the <em>CallWithNamedArgs </em>method was called. But what we need is the execution context of the target function, which is the Function object on which the <em>CallWithNamedArgs </em>method was called. That is, what we need is the current execution context of the parent object. Any ideas? <a href="http://twitter.com/izuzak">@izuzak</a>
