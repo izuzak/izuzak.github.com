@@ -7,6 +7,7 @@ layout: nil
  <title>Ivan Zuzak</title>
  <link href="http://ivanzuzak.info/atom.xml" rel="self"/>
  <link href="http://ivanzuzak.info"/>
+ <link href="http://pubsubhubbub.appspot.com" rel="hub"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
  <id>http://ivanzuzak.info/</id>
  <author>
