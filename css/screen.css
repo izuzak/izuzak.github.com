@@ -138,10 +138,6 @@ ul.posts {
       float: right;
     }
 
-      .site .footer .rss img {
-        border: 0;
-      }
-
 /*****************************************************************************/
 /*
 /* Posts
@@ -155,7 +151,7 @@ ul.posts {
   /* standard */
 
   #post pre {
-    border: 1px solid #ddd;
+    border: 0px solid #ddd;
     background-color: #eef;
     padding: 0 .4em;
   }
