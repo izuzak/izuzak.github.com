@@ -80,6 +80,10 @@ ul.posts {
     width: 32.5em;
     display: inline-block;
   }
+  
+  ul.posts div {
+    vertical-align: top;
+  }
 
   ul.posts li div span {
     color: #aaa;
