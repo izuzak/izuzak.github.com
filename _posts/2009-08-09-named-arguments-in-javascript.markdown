@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Named arguments in JavaScript
-tags: javascript, named arguments, pmrpc, programming, web
 ---
 
 _(this post was initially published on [my previous blog on wordpress.com](http://izuzak.wordpress.com/), you can visit it [here](http://izuzak.wordpress.com/2009/08/09/named-arguments-in-javascript/) and see the [comments](http://izuzak.wordpress.com/2009/08/09/named-arguments-in-javascript/#comments))_

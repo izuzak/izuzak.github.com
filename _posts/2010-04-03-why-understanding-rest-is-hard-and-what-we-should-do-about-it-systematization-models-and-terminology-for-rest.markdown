@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Why understanding REST is hard and what we should do about it - systematization, models and terminology for REST
-tags: architectural styles, architecture, automata, collaboration, comunity, finite state machine, formal model, FSM, hypermedia, model, NFA, nondeterministic, REST, software, web, WWW
 ---
 
 _(this post was initially published on [my previous blog on wordpress.com](http://izuzak.wordpress.com/), you can visit it [here](http://izuzak.wordpress.com/2010/04/03/why-understanding-rest-is-hard-and-what-we-should-do-about-it-systematization-models-and-terminology-for-rest/) and see the [comments](http://izuzak.wordpress.com/2010/04/03/why-understanding-rest-is-hard-and-what-we-should-do-about-it-systematization-models-and-terminology-for-rest/#comments))_
@@ -156,7 +155,7 @@ Or mathematically (without all the detailed explanations):
 And here's the equivalent state diagram visualization of the automaton:
 <p style="text-align:center;"></p>
 
-<img class="aligncenter" title="sm1G93HkrliKXr3WHRy--lQ (2)" src="http://izuzak.files.wordpress.com/2010/04/sm1g93hkrlikxr3whry-lq-2.png" />
+<img class="aligncenter" title="sm1G93HkrliKXr3WHRy--lQ (2)" src="http://izuzak.files.wordpress.com/2010/04/sm1g93hkrlikxr3whry-lq-2.png" width="100%"/>
 
 For such a model, we could generate a random sequence of input symbols and check if the automaton will end up in a steady state or not. You can do this for homework :).
 <h2>Conclusion</h2>

@@ -65,8 +65,23 @@ ul.posts {
   ul.posts li {
     line-height: 1.75em;
   }
+  
+  ul.posts .postsdate {
+    width: 6em;
+    display: inline-block;
+  }
+  
+  ul.posts .postssep {
+    width: 1em;
+    display: inline-block;
+  }
+  
+  ul.posts .poststitle {
+    width: 32.5em;
+    display: inline-block;
+  }
 
-  ul.posts span {
+  ul.posts li div span {
     color: #aaa;
     font-family: Monaco, "Courier New", monospace;
     font-size: 80%;
