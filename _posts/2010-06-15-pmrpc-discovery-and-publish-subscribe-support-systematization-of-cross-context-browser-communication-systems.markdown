@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Pmrpc discovery and publish-subscribe support + systematization of cross-context browser communication systems
-tags: pmrpc, html5, postmessage, inter-widget, inter-iframe, communication, browser, web workers, discovery, publish-subscribe, pubsub, cross-context, cross-domain, cross-origin, WebWorker, systematization, classification, cookies, url fragment
+tags: "pmrpc, html5, postmessage, inter-widget, inter-iframe, communication, browser, web workers, discovery, publish-subscribe, pubsub, cross-context, cross-domain, cross-origin, WebWorker, systematization, classification, cookies, url fragment"
 ---
 
 _(this post was initially published on [my previous blog on wordpress.com](http://izuzak.wordpress.com/), you can visit it [here](http://izuzak.wordpress.com/2010/06/15/pmrpc-discovery-and-publish-subscribe-support-systematization-of-cross-context-browser-communication-systems/) and see the [comments](http://izuzak.wordpress.com/2010/06/15/pmrpc-discovery-and-publish-subscribe-support-systematization-of-cross-context-browser-communication-systems/#comments))_
@@ -93,7 +93,7 @@ The implementation of the discover method is based on <strong>recursively visiti
 </ol>
 It's not an ideal way of discovering remote contexts, but it's better than nothing and works with the latest versions of all major browsers.
 
-<img class="aligncenter" title="Discovery architecture" src="http://izuzak.files.wordpress.com/2010/06/discoarchitecture-1.png" alt="" width="576" height="432" />
+<img class="aligncenter" title="Discovery architecture" src="http://izuzak.files.wordpress.com/2010/06/discoarchitecture-1.png" alt="" />
 
 <h2>Systematization of cross-context browser communication systems</h2>
 It's evident that the WWW is becoming ever more componentized as almost every web site is a mashup, contains widgets or uses WebWorkers. As a result, there has been a increase in development of systems that enable communication between these different browser contexts - windows, iframes and WebWorkers. Pmrpc is only one example of such system and lots of other systems exist. However, as the number of these systems increases, the<strong> understanding of each systems' capabilities and their comparison and evaluation becomes a more difficult task</strong> since no effort is being made to systematize this ecosystem.

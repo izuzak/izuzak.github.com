@@ -24,13 +24,13 @@ The first idea for extending project sites is to <strong>embed 3-rd party conten
 	<li>Edit one of your wiki pages and create a Google Gadget element that references the URL of the uploaded specification. <strong>Note</strong> that you must reference the raw-file URL of the XML spec which you can get by viewing the uploaded file in your project's Source tab and then clicking "View raw file" under File info.</li>
 </ol>
 
-<a href="http://code.google.com/p/pubsubhubbub"><img class="aligncenter" style="margin:5px;" title="Example 1" src="http://izuzak.files.wordpress.com/2009/12/blog_pres1.png" alt="Example 1" width="320" height="200" /></a> 
+<p><a href="http://code.google.com/p/pubsubhubbub"><img class="aligncenter" title="Example 1" src="http://izuzak.files.wordpress.com/2009/12/blog_pres1.png" alt="Example 1" width="320" height="200" /></a></p> 
 
-<a href="http://code.google.com/p/feed-buster"><img class="aligncenter" style="margin-top:5px;margin-bottom:5px;" title="Example 2" src="http://izuzak.files.wordpress.com/2009/12/blog_ff1.png" alt="Example 2" width="320" height="200" /></a>
+<p><a href="http://code.google.com/p/feed-buster"><img class="aligncenter" title="Example 2" src="http://izuzak.files.wordpress.com/2009/12/blog_ff1.png" alt="Example 2" width="320" height="200" /></a></p>
 
-<a href="http://code.google.com/p/pmrpc/wiki/PmrpcTesting"><img class="aligncenter" style="margin:5px;" title="Example 3" src="http://izuzak.files.wordpress.com/2009/12/blog_qunit1.png" alt="Example 3" width="320" height="200" /></a>
+<p><a href="http://code.google.com/p/pmrpc/wiki/PmrpcTesting"><img class="aligncenter"  title="Example 3" src="http://izuzak.files.wordpress.com/2009/12/blog_qunit1.png" alt="Example 3" width="320" height="200" /></a></p>
 
-<a href="http://code.google.com/p/urlecho"><img class="aligncenter" style="margin:5px;" title="Example 4" src="http://izuzak.files.wordpress.com/2009/12/blog_form1.png" alt="Example 4" width="320" height="200" /></a>
+<p><a href="http://code.google.com/p/urlecho"><img class="aligncenter" title="Example 4" src="http://izuzak.files.wordpress.com/2009/12/blog_form1.png" alt="Example 4" width="320" height="200" /></a></p>
 
 And here are some examples that show the usefulness of this approach (images above, in order of appearance):
 <ol style="padding-left:30px;">
@@ -48,9 +48,9 @@ The second idea for extending project sites involves <strong>using the source r
 	<li>Create a link to the obtained URL from one of your wiki pages.</li>
 </ol>
 
-<a href="http://pubsubhubbub.googlecode.com/svn/trunk/pubsubhubbub-core-0.2.html"><img class="aligncenter" style="margin-top:5px;margin-bottom:5px;" title="Example 1" src="http://izuzak.files.wordpress.com/2009/12/blog_pshb.png" alt="Example 1" width="320" height="200" /></a>
+<p><a href="http://pubsubhubbub.googlecode.com/svn/trunk/pubsubhubbub-core-0.2.html"><img class="aligncenter" title="Example 1" src="http://izuzak.files.wordpress.com/2009/12/blog_pshb.png" alt="Example 1" width="320" height="200" /></a></p>
 
-<a href="http://closure-library.googlecode.com/svn/trunk/closure/goog/docs/index.html"><img class="aligncenter" style="margin-top:5px;margin-bottom:5px;" title="Example 2" src="http://izuzak.files.wordpress.com/2009/12/blog_closure.png" alt="Example 2" width="320" height="200" /></a>
+<p><a href="http://closure-library.googlecode.com/svn/trunk/closure/goog/docs/index.html"><img class="aligncenter" title="Example 2" src="http://izuzak.files.wordpress.com/2009/12/blog_closure.png" alt="Example 2" width="320" height="200" /></a></p>
 
 And here are two examples that show the usefulness of this approach (images above, in order of appearance):
 <ol>
