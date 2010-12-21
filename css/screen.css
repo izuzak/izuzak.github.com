@@ -66,22 +66,22 @@ ul.posts {
     line-height: 1.75em;
   }
   
-  ul.posts .postsdate {
+  ul.posts li .postsdate {
     width: 6em;
     display: inline-block;
   }
   
-  ul.posts .postssep {
+  ul.posts li .postssep {
     width: 1em;
     display: inline-block;
   }
   
-  ul.posts .poststitle {
+  ul.posts li .poststitle {
     width: 32.5em;
     display: inline-block;
   }
   
-  ul.posts div {
+  ul.posts li div {
     vertical-align: top;
   }
 
