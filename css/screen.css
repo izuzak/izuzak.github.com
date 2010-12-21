@@ -191,3 +191,9 @@ ul.posts {
   #related h2 {
     margin-bottom: 1em;
   }
+  
+img.aligncenter {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+}
