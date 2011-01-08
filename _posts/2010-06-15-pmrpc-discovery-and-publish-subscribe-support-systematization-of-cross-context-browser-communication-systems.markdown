@@ -48,7 +48,7 @@ pmrpc.call( {
 } );
 {% endhighlight %}
 
-Under the hood, the publish-subscribe feature uses the discovery feature to discover all window, iframe and WebWorker context objects and retrieves their references. Also, the publish-subscribe feature may be used with <a href="code.google.com/p/pmrpc/wiki/PmrpcApiDocs" target="_blank">other pmrpc features</a>, like access control and retries.
+Under the hood, the publish-subscribe feature uses the discovery feature to discover all window, iframe and WebWorker context objects and retrieves their references. Also, the publish-subscribe feature may be used with <a href="http://code.google.com/p/pmrpc/wiki/PmrpcApiDocs" target="_blank">other pmrpc features</a>, like access control and retries.
 
 The <strong>discovery feature</strong> enables dynamic discovery of procedures registered at remote contexts and their filtering using various optional criteria. Discovered procedures may be filtered by the destination window/iframe/webworker context object, destination context origin (specified as a regular expression) and destination procedure name (also specified as a regular expression). For each discovered procedure that wasn't filtered out, the procedure name, origin of the destination context, the access control rules specified for the procedure and the destination context object. The feature is implemented as a <strong>new pmrpc method</strong> - <em>pmrpc.discover</em>. The method is asynchronous and accepts a parameter object which specifies the filters and a callback method which will be called when all registered procedures are discovered. Here's an example:
 
