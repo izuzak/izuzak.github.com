@@ -8,11 +8,11 @@
     <foaf:maker rdf:resource="#me"/>
     <foaf:primaryTopic rdf:resource="#me"/>
 </foaf:PersonalProfileDocument>
-<foaf:Person rdf:ID="me">
+<foaf:Person rdf:about="#me">
     <foaf:nick>izuzak</foaf:nick>
     <foaf:givenname>Ivan</foaf:givenname>
     <foaf:family_name>Zuzak</foaf:family_name>
-    <foaf:homepage rdf:resource="http://ivanzuzak.info"/>
+    <foaf:homepage rdf:resource="http://ivanzuzak.info/"/>
 </foaf:Person>
 <rsa:RSAPublicKey>
     <cert:identity rdf:resource="#me" />
