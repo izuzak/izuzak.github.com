@@ -7,9 +7,8 @@
 <foaf:PersonalProfileDocument rdf:about="">
     <foaf:maker rdf:resource="#me"/>
     <foaf:primaryTopic rdf:resource="#me"/>
-    <foaf:title rdf:resource="Ivan Zuzak's FOAF file"/>
 </foaf:PersonalProfileDocument>
-<foaf:Person rdf:ID="#me">
+<foaf:Person rdf:ID="me">
     <foaf:nick>izuzak</foaf:nick>
     <foaf:givenname>Ivan</foaf:givenname>
     <foaf:family_name>Zuzak</foaf:family_name>
