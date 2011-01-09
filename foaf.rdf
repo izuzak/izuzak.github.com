@@ -1,0 +1,24 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+      xmlns:foaf="http://xmlns.com/foaf/0.1/"
+      xmlns:rsa="http://www.w3.org/ns/auth/rsa#"
+      xmlns:cert="http://www.w3.org/ns/auth/cert#"
+      xmlns:admin="http://webns.net/mvcb/">
+<foaf:PersonalProfileDocument rdf:about="">
+    <foaf:maker rdf:resource="#me"/>
+    <foaf:primaryTopic rdf:resource="#me"/>
+</foaf:PersonalProfileDocument>
+<foaf:Person rdf:ID="me">
+    <foaf:nick>izuzak</foaf:nick>
+    <foaf:givenname>Ivan</foaf:givenname>
+    <foaf:family_name>Zuzak</foaf:family_name>
+    <foaf:homepage rdf:resource="http://ivanzuzak.info"/>
+</foaf:Person>
+<rdf:Description>
+<rdf:type rdf:resource="http://www.w3.org/ns/auth/rsa#RSAPublicKey"/>
+<cert:identity rdf:resource="#me"/>
+    <rsa:modulus rdf:parseType="Resource"><cert:hex>D5D20DA69B8B202AB788BF9C727701AE19DF357C05F5D7B8FBBCC06D7E9E331C81D4D235408628E2296BC2F255840167FAC22A9BC88723B8A5D396414A3D1FEF83D4A56A627BF41358FAF597386D23A6A9C7132126173D513578D6B84F3C9465D8002DE1BD04417089F3B29BB617B6C52E73A38E82E2C952E8F0C8BC6620A0B9905441238C5138EDFCCC9470EA21798E16CC2E5A03CABE82BDB69F48995C662C9601641346AED9DFDA96C029D5D2C87158FFEBED6A232C0246280BA5CBD66ADA0320D7CEEBEBEF6B32E29B453FFC1A7B90DEF409DB647273E264209C93E9B1A16EFE8007EFA6FD13B6D88F0327A19087DD5C2B75FB9D6C0F32F2E163C49B1C3F</cert:hex></rsa:modulus>
+    <rsa:public_exponent rdf:parseType="Resource"><cert:decimal>65537</cert:decimal></rsa:public_exponent>
+</rdf:Description>
+</rdf:RDF>
+
