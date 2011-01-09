@@ -1,6 +1,27 @@
 ---
 layout: default
 title: Ivan Zuzak
+projects:
+    - name: node-revhttpws
+      description: Reverse HTTP and WebSockets proxy using NodeJS and WebSockets.
+      url: http://github.com/izuzak/node-revhttpws/
+    
+    - name: pmrpc
+      description: HTML5 inter-window and web workers RPC and pubsub communication library.
+      url: http://code.google.com/p/pmrpc/
+    
+    - name: urlreq
+      description: AppEngine HTTP proxy that decodes a HTTP request defined in URL query parameters and makes that request.
+      url: http://github.com/izuzak/urlreq/
+    
+    - name: urlecho
+      description: Protocol and AppEngine service for echoing a HTTP response defined in the request URL.
+      url: http://github.com/izuzak/urlecho/
+    
+    - name: feed-buster
+      description: AppEngine service for injecting MediaRSS tags into RSS/ATOM feeds.
+      url: http://code.google.com/p/feed-buster/
+    
 ---
 
 <link rel="me" type="text/html" href="http://www.google.com/profiles/izuzak"/>
@@ -19,10 +40,12 @@ title: Ivan Zuzak
 
   <h1>Open Source Projects</h1>
   <ul class="posts">
-    <li><a href="http://github.com/izuzak/node-revhttpws/">node-revhttpws:</a> Reverse HTTP and WebSockets proxy using NodeJS+WebSockets.</li>
-    <li><a href="http://code.google.com/p/pmrpc/">pmrpc:</a> HTML5 inter-window and web workers RPC and pubsub communication library.</li>
-    <li><a href="http://github.com/izuzak/urlreq/">urlreq:</a> AppEngine HTTP proxy that decodes a HTTP request defined in URL query parameters and makes that request.</li>
-    <li><a href="http://github.com/izuzak/urlecho/">urlecho:</a> Protocol and AppEngine service for echoing a HTTP response defined in the request URL.</li>
-    <li><a href="http://code.google.com/p/feed-buster/">feed-buster:</a> AppEngine service for injecting MediaRSS tags into RSS/ATOM feeds.</li>
+    {% for project in page.projects %}
+      <li>
+        <div class="projectname"><span><a href="{{project.url}}">{{ project.name }}</a></span></div>
+        <div class="projectsep"> &raquo; </div>
+        <div class="projectdescription">{{ project.description }}</div>
+      </li>
+    {% endfor %}
   </ul>
 </div>

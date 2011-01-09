@@ -90,6 +90,21 @@ ul.posts {
     font-family: Monaco, "Courier New", monospace;
     font-size: 80%;
   }
+  
+  ul.posts li .projectname {
+    width: 8em;
+    display: inline-block;
+  }
+  
+  ul.posts li .projectsep {
+    width: 1em;
+    display: inline-block;
+  }
+  
+  ul.posts li .projectdescription {
+    width: 30.5em;
+    display: inline-block;
+  }
 
 /*****************************************************************************/
 /*
