@@ -35,7 +35,6 @@ talks:
       date: 28 May 2008
       place: Google Tech Talk, Mountain View, California, USA
       url: http://www.youtube.com/watch?v=fbUvCdADz_A
-      download: no
     
     - authors: Ivan Zuzak, Sinisa Srbljic, Ivan Benc
       title: "Building Distributed Access Control System Using Service-Oriented Programming Model"
@@ -77,7 +76,7 @@ talks:
       <li>
         <div class="talkyear"><span>{{ talk.date }}</span></div>
         <div class="talksep"> &raquo; </div>
-        <div class="talkdescription"><a href="{{talk.url}}">{{ talk.title }}</a>, <i>{{ talk.authors }}</i>, {{ talk.place }}{% if talk.download != 'no' %}, <a href="{{ talk.download }}">download</a> {% endif %} </div>
+        <div class="talkdescription"><a href="{{talk.url}}">{{ talk.title }}</a>, <i>{{ talk.authors }}</i>, {{ talk.place }}{% if talk.download %}, <a href="{{ talk.download }}">download</a> {% endif %} </div>
       </li>
     {% endfor %}
   </ul>
