@@ -67,7 +67,7 @@ ul.posts {
   }
   
   ul.posts li .postsdate {
-    width: 6em;
+    width: 8em;
     display: inline-block;
   }
   
@@ -77,7 +77,7 @@ ul.posts {
   }
   
   ul.posts li .poststitle {
-    width: 32.5em;
+    width: 30.5em;
     display: inline-block;
   }
   
@@ -102,6 +102,21 @@ ul.posts {
   }
   
   ul.posts li .projectdescription {
+    width: 30.5em;
+    display: inline-block;
+  }
+
+  ul.posts li .talkyear {
+    width: 8em;
+    display: inline-block;
+  }
+  
+  ul.posts li .talksep {
+    width: 1em;
+    display: inline-block;
+  }
+  
+  ul.posts li .talkdescription {
     width: 30.5em;
     display: inline-block;
   }
