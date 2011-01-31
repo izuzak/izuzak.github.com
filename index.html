@@ -69,15 +69,4 @@ talks:
       </li>
     {% endfor %}
   </ul>
-  
-  <h1>Talks and papers</h1>
-  <ul class="posts">
-    {% for talk in page.talks %}
-      <li>
-        <div class="talkyear"><span>{{ talk.date }}</span></div>
-        <div class="talksep"> &raquo; </div>
-        <div class="talkdescription"><i>{{ talk.authors }}</i>, <a href="{{talk.url}}">{{ talk.title }}</a>, {{ talk.place }} {% if talk.download != 'no' %}, <a href="{{ talk.download }}">download</a> {% endif %} </div>
-      </li>
-    {% endfor %}
-  </ul>
 </div>
