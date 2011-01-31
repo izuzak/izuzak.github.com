@@ -21,7 +21,6 @@ projects:
     - name: feed-buster
       description: AppEngine service for injecting MediaRSS tags into RSS/ATOM feeds.
       url: http://code.google.com/p/feed-buster/
-
 talks:
     - authors: Ivan Budiselic, Ivan Zuzak, Ivan Benc
       title: Application middleware for convergence of IP Multimedia system and Web Services
@@ -35,6 +34,7 @@ talks:
       year: 28 May 2008
       place: Google Tech Talk, Mountain View, California, USA
       url: http://www.youtube.com/watch?v=fbUvCdADz_A
+      download: no
     
     - authors: Ivan Zuzak, Sinisa Srbljic, Ivan Benc
       title: Building Distributed Access Control System Using Service-Oriented Programming Model
@@ -42,7 +42,7 @@ talks:
       place: International conference on Networking and Services (ICNS), San Jose, California, USA
       url: http://www.computer.org/portal/web/csdl/doi/10.1109/ICNS.2006.30
       download: /papers/2006_DACS_SOPM.pdf
-      
+
 ---
 
 <link rel="me" type="text/html" href="http://www.google.com/profiles/izuzak"/>
@@ -76,7 +76,7 @@ talks:
       <li>
         <div class="talkyear"><span>{{ talk.date }}</span></div>
         <div class="talksep"> &raquo; </div>
-        <div class="talkdescription"><i>{{ talk.authors }}</i>, <a href="{{talk.url}}">{{ talk.title }}</a>, {{ talk.place }} {% if talk.download %}, <a href="{{ talk.download }}"> download </a> {% endif %} </div>
+        <div class="talkdescription"><i>{{ talk.authors }}</i>, <a href="{{talk.url}}">{{ talk.title }}</a>, {{ talk.place }} {% if talk.download != 'no' %}, <a href="{{ talk.download }}">download</a> {% endif %} </div>
       </li>
     {% endfor %}
   </ul>
