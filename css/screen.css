@@ -66,21 +66,6 @@ ul.posts {
     line-height: 1.75em;
   }
   
-  ul.posts li .postsdate {
-    width: 8em;
-    display: inline-block;
-  }
-  
-  ul.posts li .postssep {
-    width: 1em;
-    display: inline-block;
-  }
-  
-  ul.posts li .poststitle {
-    width: 30.5em;
-    display: inline-block;
-  }
-  
   ul.posts li div {
     vertical-align: top;
   }
@@ -91,32 +76,17 @@ ul.posts {
     font-size: 80%;
   }
   
-  ul.posts li .projectname {
+  ul.posts li .first {
     width: 8em;
     display: inline-block;
   }
   
-  ul.posts li .projectsep {
+  ul.posts li .sep {
     width: 1em;
     display: inline-block;
   }
   
-  ul.posts li .projectdescription {
-    width: 30.5em;
-    display: inline-block;
-  }
-
-  ul.posts li .talkyear {
-    width: 8em;
-    display: inline-block;
-  }
-  
-  ul.posts li .talksep {
-    width: 1em;
-    display: inline-block;
-  }
-  
-  ul.posts li .talkdescription {
+  ul.posts li .second {
     width: 30.5em;
     display: inline-block;
   }

@@ -38,7 +38,7 @@ talks:
     
     - authors: Ivan Zuzak, Sinisa Srbljic, Ivan Benc
       title: "Building Distributed Access Control System Using Service-Oriented Programming Model"
-      date: 16 July 2006
+      date: 16 Jul 2006
       place: International conference on Networking and Services (ICNS), San Jose, California, USA
       url: http://www.computer.org/portal/web/csdl/doi/10.1109/ICNS.2006.30
       download: /papers/2006_DACS_SOPM.pdf
@@ -48,35 +48,59 @@ talks:
 <link rel="me" type="text/html" href="http://www.google.com/profiles/izuzak"/>
 
 <div id="home">
+  
+  <a name="about"><a/>
+  <h1>About</h1>
+  <ul class="posts">
+    <li>
+      <div class="first"><span>Ivan Zuzak</span></div>
+      <div class="sep"> &raquo; </div>
+      <div class="second">I'm a Web engineer living in <a href="http://goo.gl/maps/qf9m">Zagreb, Croatia</a> and working as a research assistant at the <a href="http://www.fer.hr/en">School of electrical engineering and computing, University of Zagreb</a>.</div>
+    </li>
+    <li>
+      <div class="first"><span>Ivan Zuzak</span></div>
+      <div class="sep"> &raquo; </div>
+      <div class="second">See my <a href="#blog">blog posts</a>, <a href="#projects">open source projects</a> and <a href="#talks">talks and papers below</a>.</div>
+    </li>
+    <li>
+      <div class="first"><span>Ivan Zuzak</span></div>
+      <div class="sep"> &raquo; </div>
+      <div class="second">Find and contact me via <a href="mailto:izuzak@gmail.com">e-mail</a>, <a href="http://www.twitter.com/izuzak">Twitter</a>, <a href="http://hr.linkedin.com/in/izuzak/">LinkedIn</a>, <a href="http://www.github.com/izuzak">GitHub</a> and <a href="xmpp:izuzak@gmail.com">XMPP for chat</a>.</div>
+    </li>
+  </ul>
+  
+  <a name="blog"><a/>
   <h1>Blog Posts</h1>
   <ul class="posts">
     {% for post in site.posts %}
       <li>
-        <div class="postsdate"><span>{{ post.date | date_to_string }}</span></div>
-        <div class="postssep"> &raquo; </div>
-        <div class="poststitle"><a href="{{ post.url }}">{{ post.title }}</a></div>
+        <div class="first"><span>{{ post.date | date_to_string }}</span></div>
+        <div class="sep"> &raquo; </div>
+        <div class="second"><a href="{{ post.url }}">{{ post.title }}</a></div>
       </li>
     {% endfor %}
   </ul>
 
+  <a name="projects"><a/>
   <h1>Open Source Projects</h1>
   <ul class="posts">
     {% for project in page.projects %}
       <li>
-        <div class="projectname"><span><a href="{{project.url}}">{{ project.name }}</a></span></div>
-        <div class="projectsep"> &raquo; </div>
-        <div class="projectdescription">{{ project.description }}</div>
+        <div class="first"><span><a href="{{project.url}}">{{ project.name }}</a></span></div>
+        <div class="sep"> &raquo; </div>
+        <div class="second">{{ project.description }}</div>
       </li>
     {% endfor %}
   </ul>
-    
+  
+  <a name="talks"><a/>
   <h1>Talks and papers</h1>
   <ul class="posts">
     {% for talk in page.talks %}
       <li>
-        <div class="talkyear"><span>{{ talk.date }}</span></div>
-        <div class="talksep"> &raquo; </div>
-        <div class="talkdescription"><a href="{{talk.url}}">{{ talk.title }}</a>, <i>{{ talk.authors }}</i>, {{ talk.place }}{% if talk.download %}, <a href="{{ talk.download }}">download</a> {% endif %} </div>
+        <div class="first"><span>{{ talk.date }}</span></div>
+        <div class="sep"> &raquo; </div>
+        <div class="second"><a href="{{talk.url}}">{{ talk.title }}</a>, <i>{{ talk.authors }}</i>, {{ talk.place }}{% if talk.download %}, <a href="{{ talk.download }}">download</a> {% endif %} </div>
       </li>
     {% endfor %}
   </ul>
