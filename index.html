@@ -25,21 +25,21 @@ projects:
 talks:
     - authors: Ivan Budiselic, Ivan Zuzak, Ivan Benc
       title: "Application middleware for convergence of IP Multimedia system and Web Services"
-      year: 24 May 2010
+      date: 24 May 2010
       place: 33rd International Convention MIPRO, Opatija, Croatia
       url: http://ieeexplore.ieee.org/xpl/freeabs_all.jsp?arnumber=5533443
       download: /papers/2010_SIPWS_middleware.pdf
     
     - authors: Ivan Zuzak, Jakov Krolo, Sinisa Srbljic
       title: "Geppeto: Promoting End-users to Gadget Developers"
-      year: 28 May 2008
+      date: 28 May 2008
       place: Google Tech Talk, Mountain View, California, USA
       url: http://www.youtube.com/watch?v=fbUvCdADz_A
       download: no
     
     - authors: Ivan Zuzak, Sinisa Srbljic, Ivan Benc
       title: "Building Distributed Access Control System Using Service-Oriented Programming Model"
-      year: 16 July 2006
+      date: 16 July 2006
       place: International conference on Networking and Services (ICNS), San Jose, California, USA
       url: http://www.computer.org/portal/web/csdl/doi/10.1109/ICNS.2006.30
       download: /papers/2006_DACS_SOPM.pdf
@@ -77,7 +77,7 @@ talks:
       <li>
         <div class="talkyear"><span>{{ talk.date }}</span></div>
         <div class="talksep"> &raquo; </div>
-        <div class="talkdescription"><i>{{ talk.authors }}</i>, <a href="{{talk.url}}">{{ talk.title }}</a>, {{ talk.place }} {% if talk.download != 'no' %}, <a href="{{ talk.download }}">download</a> {% endif %} </div>
+        <div class="talkdescription"><a href="{{talk.url}}">{{ talk.title }}</a>, <i>{{ talk.authors }}</i>, {{ talk.place }}{% if talk.download != 'no' %}, <a href="{{ talk.download }}">download</a> {% endif %} </div>
       </li>
     {% endfor %}
   </ul>
