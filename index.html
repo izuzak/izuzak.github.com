@@ -60,7 +60,7 @@ talks:
     <li>
       <div class="first"><span>Ivan Zuzak</span></div>
       <div class="sep"> &raquo; </div>
-      <div class="second">See my <a href="#blog">blog posts</a>, <a href="#projects">open source projects</a> and <a href="#talks">talks and papers</a> below.</div>
+      <div class="second">See my <a href="#blog">blog posts</a>, <a href="#projects">open source projects</a>, <a href="#talks">talks and papers</a> and <a href="#other">other stuff by me</a> below.</div>
     </li>
     <li>
       <div class="first"><span>Ivan Zuzak</span></div>
@@ -103,5 +103,15 @@ talks:
         <div class="second"><a href="{{talk.url}}">{{ talk.title }}</a>, <i>{{ talk.authors }}</i>, {{ talk.place }}{% if talk.download %}, <a href="{{ talk.download }}">download</a> {% endif %} </div>
       </li>
     {% endfor %}
+  </ul>
+  
+  <a name="other"></a>
+  <h1>Other stuff by me</h1>
+  <ul class="posts">
+    <li>
+      <div class="first"><span><a href="http://thisweekinrest.wordpress.com">ThisWeekInREST</a></span></div>
+      <div class="sep"> &raquo; </div>
+      <div class="second"> A periodic blog collecting news related to the <a href="http://en.wikipedia.org/wiki/Representational_State_Transfer">REST architectural style</a>. </div>
+    </li>
   </ul>
 </div>
