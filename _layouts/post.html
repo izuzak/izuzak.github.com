@@ -13,9 +13,9 @@ layout: default
   <ul class="posts">
     {% for post in site.related_posts limit:3 %}
       <li>
-        <div class="postsdate"><span>{{ post.date | date_to_string }}</span></div>
-        <div class="postssep"> &raquo; </div>
-        <div class="poststitle"><a href="{{ post.url }}">{{ post.title }}</a></div>
+        <div class="first"><span>{{ post.date | date_to_string }}</span></div>
+        <div class="sep"> &raquo; </div>
+        <div class="second"><a href="{{ post.url }}">{{ post.title }}</a></div>
       </li>
     {% endfor %}
   </ul>
