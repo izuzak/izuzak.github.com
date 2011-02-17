@@ -103,7 +103,7 @@ talks:
       <li>
         <div class="first"><span>{{ talk.date }}</span></div>
         <div class="sep"> &raquo; </div>
-        <div class="second"><b>{{(talk.type)}}</b> <a href="{{talk.url}}">{{ talk.title }}</a>, <i>{{ talk.authors }}</i>, {{ talk.place }}{% if talk.download %}, <a href="{{ talk.download }}">download</a> {% endif %} </div>
+        <div class="second"><b>({{talk.type}})</b> <a href="{{talk.url}}">{{ talk.title }}</a>, <i>{{ talk.authors }}</i>, {{ talk.place }}{% if talk.download %}, <a href="{{ talk.download }}">download</a> {% endif %} </div>
       </li>
     {% endfor %}
   </ul>
