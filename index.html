@@ -29,19 +29,22 @@ talks:
       place: 33rd International Convention MIPRO, Opatija, Croatia
       url: http://ieeexplore.ieee.org/xpl/freeabs_all.jsp?arnumber=5533443
       download: /papers/2010_SIPWS_middleware.pdf
+      type: paper
     
     - authors: Ivan Zuzak, Jakov Krolo, Sinisa Srbljic
       title: "Geppeto: Promoting End-users to Gadget Developers"
       date: 28 May 2008
       place: Google Tech Talk, Mountain View, California, USA
       url: http://www.youtube.com/watch?v=fbUvCdADz_A
-    
+      type: talk
+      
     - authors: Ivan Zuzak, Sinisa Srbljic, Ivan Benc
       title: "Building Distributed Access Control System Using Service-Oriented Programming Model"
       date: 16 Jul 2006
       place: International conference on Networking and Services (ICNS), San Jose, California, USA
       url: http://www.computer.org/portal/web/csdl/doi/10.1109/ICNS.2006.30
       download: /papers/2006_DACS_SOPM.pdf
+      type: paper
 
 ---
 
@@ -100,7 +103,7 @@ talks:
       <li>
         <div class="first"><span>{{ talk.date }}</span></div>
         <div class="sep"> &raquo; </div>
-        <div class="second"><a href="{{talk.url}}">{{ talk.title }}</a>, <i>{{ talk.authors }}</i>, {{ talk.place }}{% if talk.download %}, <a href="{{ talk.download }}">download</a> {% endif %} </div>
+        <div class="second"><b>{{(talk.type)}}</b> <a href="{{talk.url}}">{{ talk.title }}</a>, <i>{{ talk.authors }}</i>, {{ talk.place }}{% if talk.download %}, <a href="{{ talk.download }}">download</a> {% endif %} </div>
       </li>
     {% endfor %}
   </ul>
