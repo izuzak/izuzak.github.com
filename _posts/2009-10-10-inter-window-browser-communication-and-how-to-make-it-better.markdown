@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Inter-window browser communication and how to make it better
+commentIssueId: 5
 ---
 
 _(this post was initially published on [my previous blog on wordpress.com](http://izuzak.wordpress.com/), you can visit it [here](http://izuzak.wordpress.com/2009/10/10/inter-window-browser-communication-and-how-to-make-it-better/) and see the [comments](http://izuzak.wordpress.com/2009/10/10/inter-window-browser-communication-and-how-to-make-it-better/#comments))_

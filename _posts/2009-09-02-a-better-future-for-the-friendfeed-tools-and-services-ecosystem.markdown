@@ -1,6 +1,7 @@
 ---
 layout: post
 title: A better future for the FriendFeed tools and services ecosystem
+commentIssueId: 4
 ---
 
 _(this post was initially published on [my previous blog on wordpress.com](http://izuzak.wordpress.com/), you can visit it [here](http://izuzak.wordpress.com/2009/09/02/a-better-future-for-the-friendfeed-tools-and-services-ecosystem/) and see the [comments](http://izuzak.wordpress.com/2009/09/02/a-better-future-for-the-friendfeed-tools-and-services-ecosystem/#comments))_

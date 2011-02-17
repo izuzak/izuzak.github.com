@@ -1,6 +1,7 @@
 ---
 layout: post
 title: How to supercharge your free AppEngine quota?
+commentIssueId: 3
 ---
 
 _(this post was initially published on [my previous blog on wordpress.com](http://izuzak.wordpress.com/), you can visit it [here](http://izuzak.wordpress.com/2009/08/27/how-to-supercharge-your-free-appengine-quota/) and see the [comments](http://izuzak.wordpress.com/2009/08/27/how-to-supercharge-your-free-appengine-quota/#comments))_

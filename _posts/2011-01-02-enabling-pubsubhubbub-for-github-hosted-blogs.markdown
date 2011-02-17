@@ -2,6 +2,7 @@
 layout: post
 title: Enabling PubSubHubBub for GitHub hosted blogs
 tags: github, pubsubhubbub, feed, atom, webhooks, appengine
+commentIssueId: 11
 ---
 
 I've recently switched from a [Wordpress.com hosted blog](http://izuzak.wordpress.com/) to a [GitHub hosted blog](http://ivanzuzak.info) on a custom domain using [GitHub Pages](http://pages.github.com/). And one of the first things I wanted to enable for the new blog was [PubSubHubBub](http://code.google.com/p/pubsubhubbub/) (PSHB) support. Generally, in order to enable PSHB for a blog, two things need to be done:

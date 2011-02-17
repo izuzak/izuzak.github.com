@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Real-time feed processing and filtering
+commentIssueId: 8
 ---
 
 _(this post was initially published on [my previous blog on wordpress.com](http://izuzak.wordpress.com/), you can visit it [here](http://izuzak.wordpress.com/2010/01/11/real-time-feed-processing-and-filtering/) and see the [comments](http://izuzak.wordpress.com/2010/01/11/real-time-feed-processing-and-filtering/#comments))_

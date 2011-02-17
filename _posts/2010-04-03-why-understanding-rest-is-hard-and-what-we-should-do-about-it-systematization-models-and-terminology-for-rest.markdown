@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Why understanding REST is hard and what we should do about it - systematization, models and terminology for REST
+commentIssueId: 9
 ---
 
 _(this post was initially published on [my previous blog on wordpress.com](http://izuzak.wordpress.com/), you can visit it [here](http://izuzak.wordpress.com/2010/04/03/why-understanding-rest-is-hard-and-what-we-should-do-about-it-systematization-models-and-terminology-for-rest/) and see the [comments](http://izuzak.wordpress.com/2010/04/03/why-understanding-rest-is-hard-and-what-we-should-do-about-it-systematization-models-and-terminology-for-rest/#comments))_

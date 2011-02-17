@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Pmrpc discovery and publish-subscribe support + systematization of cross-context browser communication systems
+commentIssueId: 10
 ---
 
 _(this post was initially published on [my previous blog on wordpress.com](http://izuzak.wordpress.com/), you can visit it [here](http://izuzak.wordpress.com/2010/06/15/pmrpc-discovery-and-publish-subscribe-support-systematization-of-cross-context-browser-communication-systems/) and see the [comments](http://izuzak.wordpress.com/2010/06/15/pmrpc-discovery-and-publish-subscribe-support-systematization-of-cross-context-browser-communication-systems/#comments))_

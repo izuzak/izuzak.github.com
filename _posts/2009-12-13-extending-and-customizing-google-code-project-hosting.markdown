@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Extending and customizing Google Code project hosting
+commentIssueId: 6
 ---
 
 _(this post was initially published on [my previous blog on wordpress.com](http://izuzak.wordpress.com/), you can visit it [here](http://izuzak.wordpress.com/2009/12/14/extending-and-customizing-google-code-project-hosting/) and see the [comments](http://izuzak.wordpress.com/2009/12/14/extending-and-customizing-google-code-project-hosting/#comments))_

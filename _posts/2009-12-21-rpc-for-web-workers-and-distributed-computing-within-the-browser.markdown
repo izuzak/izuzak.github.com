@@ -1,6 +1,7 @@
 ---
 layout: post
 title: RPC for Web Workers and distributed computing within the browser
+commentIssueId: 7
 ---
 
 _(this post was initially published on [my previous blog on wordpress.com](http://izuzak.wordpress.com/), you can visit it [here](http://izuzak.wordpress.com/2009/12/21/rpc-for-web-workers-and-distributed-computing-within-the-browser/) and see the [comments](http://izuzak.wordpress.com/2009/12/21/rpc-for-web-workers-and-distributed-computing-within-the-browser/#comments))_
