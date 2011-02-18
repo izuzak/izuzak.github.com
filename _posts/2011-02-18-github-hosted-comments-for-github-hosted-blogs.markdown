@@ -50,6 +50,7 @@ Third, add a JavaScript script to each blog posts which pulls the post's comment
 {% highlight html %}
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 
+<script type="text/javascript">
 function loadComments(data) {  
  // ...
 }
@@ -58,6 +59,7 @@ $.ajax("http://github.com/api/v2/json/issues/comments/izuzak/izuzak.github.com/{
   dataType : "jsonp",
   jsonpCallback : "loadComments"
 });
+</script>
 {% endhighlight %}
 
 Fourth, insert the pulled comment data into the blog post's HTML and render the body of the comments using [GitHub Flavored Markdown] (http://github.github.com/github-flavored-markdown/). Inserting the comment data into the DOM is easy once you decide which data you want to display. However, since issue comments may be written in GitHub Flavored Markdown, some JavaScrip code is needed to translate the comment to HTML. Fortunately, GitHub has a [JavaScript library](https://github.com/github/github-flavored-markdown) for that also - a modified version of the [Showdown library](https://github.com/coreyti/showdown) for converting Markdown into HTML. Again, it's easiest if you put the code in the layout file for blog posts. For example, here's the code which I use for inserting comments:
@@ -66,6 +68,7 @@ Fourth, insert the pulled comment data into the blog post's HTML and render the 
 <script type="text/javascript" src="http://github.github.com/github-flavored-markdown/scripts/showdown.js"></script>
 <script type="text/javascript" src="http://datejs.googlecode.com/svn/trunk/build/date-en-US.js"></script>
 
+<script type="text/javascript">
 function loadComments(data) {  
 
 var converter = new Showdown.converter();
@@ -81,6 +84,7 @@ var converter = new Showdown.converter();
     $("#comments").append("<div class='comment'><div class='commentheader'><div class='commentgravatar'>" + '<img src="' + cgravatarlink + '" alt="" width="20" height="20">' + "</div><a class='commentuser' href=\""+ cuserlink + "\">" + cuser + "</a><a class='commentdate' href=\"" + clink + "\">" + cdate + "</a></div><div class='commentbody'>" + cbody + "</div></div>");
   }
 }
+</script>
 {% endhighlight %}
 
 Also notice that I use the [DateJS library](http://www.datejs.com/) to pretty-print the comment dates and that I fetch the Gravatar images of users who made the comments.
