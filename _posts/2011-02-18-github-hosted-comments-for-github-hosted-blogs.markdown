@@ -34,13 +34,15 @@ commentIssueId: 12
 ---
 {% endhighlight %}
 
+{% assign special = '{{page.commentIssueId}}' %}
+
 And here's the snippet of the layout file for generating blog posts (``page.commentIssueId`` part surrounded with curly braces is the Liquid template which pulls the ``commentIssueId`` of the post):
 
 {% highlight html %}
 <div id="comments">
   <h2>Comments</h2>
   <div id="header">
-    Want to leave a comment? Visit <a href="https://github.com/izuzak/izuzak.github.com/issues#issue/{{page.commentIssueId}}"> this post's issue page on GitHub</a> (you'll need a GitHub account. What? Like you already don't have one?!).
+    Want to leave a comment? Visit <a href="https://github.com/izuzak/izuzak.github.com/issues#issue/{{special}}"> this post's issue page on GitHub</a> (you'll need a GitHub account. What? Like you already don't have one?!).
   </div>
 </div>
 {% endhighlight %}
@@ -55,7 +57,7 @@ function loadComments(data) {
  // ...
 }
 
-$.ajax("http://github.com/api/v2/json/issues/comments/izuzak/izuzak.github.com/{{page.commentIssueId}}", {
+$.ajax("http://github.com/api/v2/json/issues/comments/izuzak/izuzak.github.com/{{special}}", {
   dataType : "jsonp",
   jsonpCallback : "loadComments"
 });
@@ -76,7 +78,7 @@ var converter = new Showdown.converter();
   for (var i=0; i<data.comments.length; i++) {
     var cuser = data.comments[i].user;
     var cuserlink = "https://www.github.com/" + data.comments[i].user;
-    var clink = "https://github.com/izuzak/izuzak.github.com/issues#issue/{{page.commentIssueId}}/comment/" + data.comments[i].id;
+    var clink = "https://github.com/izuzak/izuzak.github.com/issues#issue/{{special}}/comment/" + data.comments[i].id;
     var cbody = converter.makeHtml(data.comments[i].body);
     var cgravatarlink = "https://secure.gravatar.com/avatar/" + data.comments[i].gravatar_id;
     var cdate = Date.parse(data.comments[i].created_at).toString("yyyy-MM-dd HH:mm:ss");
