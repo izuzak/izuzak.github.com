@@ -185,6 +185,7 @@ ul.posts {
     background-color: #eef;
     font-size: 85%;
     padding: 0 .2em;
+    word-wrap: normal;
   }
 
     #post pre code {
