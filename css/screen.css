@@ -164,7 +164,7 @@ ul.posts {
 /*****************************************************************************/
 
 #post {
-
+  word-break: break-all;
 }
 
   /* standard */
@@ -366,6 +366,7 @@ img.aligncenter {
   padding: 0em;
   position: static;
   width: 96%;
+  word-break: break-all;
 }
   
 .comment .commentbody p {
