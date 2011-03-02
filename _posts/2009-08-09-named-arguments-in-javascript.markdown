@@ -4,8 +4,6 @@ title: Named arguments in JavaScript
 commentIssueId: 2
 ---
 
-_(this post was initially published on [my previous blog on wordpress.com](http://izuzak.wordpress.com/), you can visit it [here](http://izuzak.wordpress.com/2009/08/09/named-arguments-in-javascript/) and see the [comments](http://izuzak.wordpress.com/2009/08/09/named-arguments-in-javascript/#comments))_
-
 While working on another project (<a title="pmrpc" href="http://code.google.com/p/pmrpc" target="_blank">pmrpc</a>, which I will write about soon), the implementation of a feature came down to calling JavaScript functions with <a href="http://en.wikipedia.org/wiki/Named_parameter" target="_blank">named arguments</a>. Unfortunately, the JavaScript language (or EcmaScript to be exact) <a href="http://ajaxian.com/archives/chrome-extension-api-how-we-wish-we-have-named-parameters">doesn't support named arguments</a>, rather only positional arguments.
 
 <a href="http://www.javascriptkit.com/javatutors/namedfunction.shtml" target="_blank">Usually</a>, JavaScript developers get around this by defining functions to accept a single object argument which acts like a container for all other named parameters:

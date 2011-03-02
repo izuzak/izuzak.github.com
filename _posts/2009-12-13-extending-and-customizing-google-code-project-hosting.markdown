@@ -4,8 +4,6 @@ title: Extending and customizing Google Code project hosting
 commentIssueId: 6
 ---
 
-_(this post was initially published on [my previous blog on wordpress.com](http://izuzak.wordpress.com/), you can visit it [here](http://izuzak.wordpress.com/2009/12/14/extending-and-customizing-google-code-project-hosting/) and see the [comments](http://izuzak.wordpress.com/2009/12/14/extending-and-customizing-google-code-project-hosting/#comments))_
-
 <a href="http://code.google.com/hosting/" target="_blank"><img class="aligncenter" style="margin-top:25px;margin-bottom:15px;" title="Google Code" src="http://www.gstatic.com/codesite/ph/images/code_small.png" alt="" width="161" height="40" /></a>
 
 <p>I've used <a href="http://code.google.com/hosting/" target="_blank"><strong>Google Code project hosting</strong></a> for almost every project I've started in the last few years. It's really great and I love both the Web UI and all the functionality-related features (which Google is <a href="http://code.google.com/p/support/wiki/WhatsNew" target="_blank">continuously extending</a>). However, one aspect in which I've found Google Code project hosting<strong> strangely lacking </strong><strong>is customizability and extendability</strong> in adding rich content and even external applications to a project site. Wouldn't it be great if we could add a special "Testing" and "Group discussion" tab or an easy way to embed presentations and JavaScript code into wiki pages? This would boost the usability of project sites and make the visitor experience so much better.</p>

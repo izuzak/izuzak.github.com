@@ -4,8 +4,6 @@ title: Real-time feed processing and filtering
 commentIssueId: 8
 ---
 
-_(this post was initially published on [my previous blog on wordpress.com](http://izuzak.wordpress.com/), you can visit it [here](http://izuzak.wordpress.com/2010/01/11/real-time-feed-processing-and-filtering/) and see the [comments](http://izuzak.wordpress.com/2010/01/11/real-time-feed-processing-and-filtering/#comments))_
-
 <em>This is another lengthy post so I'm writing a brief overview as an introduction.</em>
 <h2>Introduction</h2>
 This post is about web syndication feeds (RSS and ATOM), technologies for real-time delivery of feeds (PubSubHubBub, RSSCloud) and two opportunities I believe could help make these technologies better and widen their adoption: <strong>real-time feed processing/filtering and end-user selection of processing/filtering services</strong>. First, I'll write about my experience with polling-based feed processing services from developing Feed-buster, a feed-enhancing service for use in FriendFeed. Next, I'll give a short overview of PubSubHubBub (PSHB) and several ways of integrating feed filtering and processing functionalities into the PSHB ecosystem without changing the PSHB protocol. Lastly, I'll try to argument why there should be a better solution and outline an idea for an extension to the PSHB protocol.

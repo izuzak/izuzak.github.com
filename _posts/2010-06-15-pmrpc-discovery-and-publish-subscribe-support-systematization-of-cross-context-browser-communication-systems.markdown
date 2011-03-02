@@ -4,8 +4,6 @@ title: Pmrpc discovery and publish-subscribe support + systematization of cross-
 commentIssueId: 10
 ---
 
-_(this post was initially published on [my previous blog on wordpress.com](http://izuzak.wordpress.com/), you can visit it [here](http://izuzak.wordpress.com/2010/06/15/pmrpc-discovery-and-publish-subscribe-support-systematization-of-cross-context-browser-communication-systems/) and see the [comments](http://izuzak.wordpress.com/2010/06/15/pmrpc-discovery-and-publish-subscribe-support-systematization-of-cross-context-browser-communication-systems/#comments))_
-
 
 The <a href="http://code.google.com/p/pmrpc/" target="_blank">pmrpc</a> cross-context browser communication library has grown from the <a href="http://wp.me/poYaf-44" target="_blank">last time I blogged about it</a>. Last time I wrote about adding support for RPC-style communication for <a href="http://www.whatwg.org/specs/web-workers/current-work/" target="_blank">WebWorkers</a>. Today I'll first introduce two new features - dynamic <strong>discovery of remote procedures</strong> and a<strong> publish-subscribe communication model</strong>. Also, I'll write about our <a href="http://code.google.com/p/pmrpc/wiki/IWCProjects" target="_blank"><strong>systematization of existing systems for cross-context browser communication</strong></a>.
 <h2>Discovery and publish subscribe</h2>

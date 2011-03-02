@@ -4,8 +4,6 @@ title: Why understanding REST is hard and what we should do about it - systemati
 commentIssueId: 9
 ---
 
-_(this post was initially published on [my previous blog on wordpress.com](http://izuzak.wordpress.com/), you can visit it [here](http://izuzak.wordpress.com/2010/04/03/why-understanding-rest-is-hard-and-what-we-should-do-about-it-systematization-models-and-terminology-for-rest/) and see the [comments](http://izuzak.wordpress.com/2010/04/03/why-understanding-rest-is-hard-and-what-we-should-do-about-it-systematization-models-and-terminology-for-rest/#comments))_
-
 <em>This is going to be another long post, so I'm using the introduction as an overview again.</em>
 
 <em><span style="font-family:Verdana;font-style:normal;line-height:normal;"> </span></em>
