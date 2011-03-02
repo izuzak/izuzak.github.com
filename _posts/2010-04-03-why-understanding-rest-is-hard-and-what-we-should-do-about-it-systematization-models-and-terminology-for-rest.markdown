@@ -94,7 +94,7 @@ while there are more input symbols to process:
 </td>
 </tr>
 <tr>
-<td><center><img class="aligncenter" style="margin:5px;" title="sdcQSv__tPdzJu-H_MxJqTw (3)" src="http://izuzak.files.wordpress.com/2010/04/sdcqsv__tpdzju-h_mxjqtw-3.png" alt="" width="300" height="123" />
+<td><center><img class="aligncenter" style="margin:5px;" src="/images/rest_system1.png" alt="" width="300" height="123" />
 </center></td>
 </tr>
 </tbody>
@@ -117,7 +117,7 @@ while there are more input symbols to process:
 </tr>
 <tr>
 <td>
-<center><img class="aligncenter" style="margin:5px;" title="sdcQSv__tPdzJu-H_MxJqTw" src="http://izuzak.files.wordpress.com/2010/04/sdcqsv__tpdzju-h_mxjqtw.png" width="300" height="123" />
+<center><img class="aligncenter" style="margin:5px;" src="/images/rest_system2.png" width="300" height="123" />
 </center></td>
 </tr>
 </tbody>
@@ -133,7 +133,7 @@ while there are more input symbols to process:
 	<li style="text-align:justify;">The only thing left is to define how the user-agent chooses transitions - the next REST request for the current state. This is the role of the GetNextInput component which implements both application- and hypermedia-level logic. The application-level logic is in charge of generating input symbols in case the current state is steady, or in other words, it chooses then next step for achieving the overall application goal. The application-level logic may be a software program or a program that delegates this responsibility to a human user. The hypermedia-level logic is in charge of generating input symbols in case the current state is transient, or in other words, it chooses which of the pending REST requests will be processed next. To satisfy the HATEOAS constraint, both the application- and hypermedia- level logic generate REST requests with resource identifiers linked to from the current state.</li>
 </ul>
 
-<img class="aligncenter" title="sQZcO1aSqqA8Kmx6TWYqzTg (1)" src="http://izuzak.files.wordpress.com/2010/04/sqzco1asqqa8kmx6twyqztg-1.png" alt="" width="600" height="383" />
+<img class="aligncenter" src="/images/rest_system3.png" alt="" width="600" height="383" />
 
 Or mathematically (without all the detailed explanations):
 <ul style="text-align:justify;">
@@ -145,7 +145,7 @@ Or mathematically (without all the detailed explanations):
 </ul>
 <p style="text-align:justify;">The operation of the automaton can be described as follows. The automaton starts from the initial steady state containing links for bootstrapping the application. Each time the automaton is in a steady state, the application level logic generates the next input symbol (request) based on the links in the current state representations and the overall application goal. The request and the current state are used by the processing infrastructure (user-agent, intermediaries, origin server) to generate a response. Notice here that the current state (representation already on the client) need not be sent to the server, it may be used on the user-agent for processing (e.g. to determine if the request is for a resource linked to from the current state or not) while only the input symbol (the request) is sent over the network. The result of the processing is the new state of the user-agent. The new state may either be steady or transient, based on the representation received in the response and it's metadata (media type). If the state is transient, the hypermedia-level logic automatically chooses requests for fetching other resources in order to bring the user-agent into a steady state so that application-level logic can take over.</p>
 
-<img class="aligncenter" title="sEelafFcKhTLEsS1-yJ-SGQ" src="http://izuzak.files.wordpress.com/2010/04/seelaffckhtless1-yj-sgq.png" alt="" width="400" height="340" />
+<img class="aligncenter" src="/images/rest_example1.png" alt="" width="400" height="340" />
 
 <p style="text-align:justify;">Now an <strong>example - applying this model to a specific RESTful system</strong>, which will of course be a simple web application shown above. The purpose of the web application is to simulate coin tossing. It has two web pages, <em>Main.html</em> and <em>Cointoss.html</em>. The <em>Main.html</em> page contains only a single link to the <em>Cointoss.html</em> page and nothing else. The <em>Cointoss.html</em> page has a link back to the <em>Main.html</em> page and a single image. Since the web application simulates coin tossing, which is nondeterministic, the image which gets included into the <em>Cointoss.html</em> is chosen randomly by the server and is either the <em>heads.png</em> image or the <em>tails.png</em> image.</p>
 <p style="text-align:justify;">The input symbols of the resulting automaton are requests for fetching application resources - the html pages and the images. The states of the resulting automaton are both steady states representing a complete page load or transient states representing partial page loads. Therefore, the <em>Main.html</em> page is represented by only a steady state since it only contains a link to <em>Cointoss.html</em>, while the <em>Cointoss.html</em> page is represented by both a transient state and a steady state since it contains an image which must be fetched after the initial page. Let's assume that the initial state contains a single link to the <em>Main.html</em> page. The transition function of the resulting automaton defines which responses the processing infrastructure returns for each state and requests. Therefore, if the user-agent requests a page or image, the server returns the requested page or image. However, if the user-agent is requesting the <em>Cointoss.html</em> page - it isn't known in advance what the server will return (heads or tails), so we need a nondeterministic transition into two possible states. Lastly, steady states define the set of acceptable states.</p>
@@ -161,7 +161,7 @@ Or mathematically (without all the detailed explanations):
 And here's the equivalent state diagram visualization of the automaton:
 <p style="text-align:center;"></p>
 
-<img class="aligncenter" title="sm1G93HkrliKXr3WHRy--lQ (2)" src="http://izuzak.files.wordpress.com/2010/04/sm1g93hkrlikxr3whry-lq-2.png" width="100%"/>
+<img class="aligncenter" src="/images/rest_example2.png" width="100%"/>
 
 For such a model, we could generate a random sequence of input symbols and check if the automaton will end up in a steady state or not. You can do this for homework :).
 <h2>Conclusion</h2>

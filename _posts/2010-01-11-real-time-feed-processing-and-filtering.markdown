@@ -14,7 +14,7 @@ Before I continue, I have to acknowledge that I've discussed some of these ideas
 <h2>Polling-based feed processing and filtering - experience from FriendFeed and Feed-Buster</h2>
 <a href="http://friendfeed.com/" target="_blank">FriendFeed</a> is a social-networking web application that aggregates updates from social media sites and blogs that expose an <a href="http://en.wikipedia.org/wiki/RSS" target="_blank">RSS</a> or <a href="http://en.wikipedia.org/wiki/Atom_feed" target="_blank">Atom</a> feed of their content. You give FriendFeed the URI of an RSS/Atom feed and it fetches and displays short snippets of updates as they appear in the feed. In most cases this means that only the title and a short snippet of the description of the new item are shown. For feeds that have <a href="http://en.wikipedia.org/wiki/Media_RSS" target="_blank">special XML tags</a> that list media resources in the update, the images/videos/audio content from the new feed item is also displayed. The problem is that <strong>most RSS/Atom feeds don't have these media XML tags </strong>since webapps that create the feeds (e.g. blogging engines) don't bother defining them. This gave a not-very-user-friendly look to most FriendFeed user pages which were just a long list of update titles and possibly snippets.
 
-<a href="http://code.google.com/p/feed-buster/" target="_blank"><img class="aligncenter" title="Feed-buster" src="http://izuzak.wordpress.com/files/2010/01/fbdemopic.png?w=300" alt="Feed-buster" width="60%" /></a>
+<a href="http://code.google.com/p/feed-buster/" target="_blank"><img class="aligncenter" title="Feed-buster" src="/images/fbdemopic.png" alt="Feed-buster" width="60%" /></a>
 
 So I built <a href="http://code.google.com/p/feed-buster/" target="_blank"><strong>Feed-buster</strong></a><strong>, an </strong><a href="http://code.google.com/appengine/" target="_blank"><strong>AppEngine</strong></a><strong> service that inserts these MediaRSS tags into feeds that don't have them</strong>. Since the only thing FriendFeed accepts from users are URIs pointing to feeds - the service must be callable by requesting a single URI with a HTTP GET request and must return an RSS/Atom feed in a HTTP response. Here's how Feed-buster works:
 <ol>
@@ -24,7 +24,7 @@ So I built <a href="http://code.google.com/p/feed-buster/" target="_blank"><stro
 </ol>
 To use the service, the user would obtain an URI of an RSS/Atom feed, create the corresponding Feed-buster URI by appending the feed URI to the Feed-buster service URI and pass it to FriendFeed (1). Suppose that the feed is not real-time enabled (i.e. a PSHB or RSSCloud feed). In this case, every 45 minutes FF will poll for updates - send a HTTP GET request to the service (2), the service will fetch the original feed (3), process the feed (4) and return a HTTP response with the processed feed (5).
 
-<img class="aligncenter" title="Feed-buster architecture" src="http://izuzak.wordpress.com/files/2010/01/fb.png?w=300" alt="Feed-buster architecture" width="60%" />
+<img class="aligncenter" title="Feed-buster architecture" src="/imagesfb.png" alt="Feed-buster architecture" width="60%" />
 
 Feed-buster is a<strong> feed processing service</strong>: it takes a feed URI as input and returns the feed it points to as output, potentially modifying any subset of feed items (but not removing any). <strong>Feed filtering services</strong> are similar: they take a feed URI as input and return the feed it points to as output, potentially removing any subset of feed items (but not modifying any). The difference is subtle and both terms could be unified under "feed processing". Furthermore, this model of feed processing/filtering was nothing new at the time I developed Feed-buster, there were <a href="http://www.readwriteweb.com/archives/6_ways_to_filter_your_rss_feeds.php" target="_blank">numerous services</a> that filtered/processed feeds based on user preferences. The best example is probably <a href="http://pipes.yahoo.com/pipes/" target="_blank"><strong>Yahoo! Pipes</strong></a><strong> which enables anyone to create a filtering/processing pipe a publish it as a service</strong> just like Feed-buster.
 
@@ -36,7 +36,7 @@ Lessons learned:
 	<li>Polling is bad (2). Real-time feed delivery arrived in the form of <a href="http://code.google.com/p/pubsubhubbub/" target="_blank">PubSubHubBub</a> and <a href="http://rsscloud.org/" target="_blank">RSSCloud</a>, <strong>everyone loved it and wanted everything to be real-time</strong>. But Feed-buster feeds weren't real-time. Even if the original feed supported PSHB, the output feed didn't (since it Feed-buster wasn't a PSHB publisher or hub). Feed-buster users were not happy.</li>
 </ul>
 
-<a href="http://izuzak.wordpress.com/files/2010/01/fbgae.png"><img class="aligncenter" title="Feed-buster - AppEngine request processing duration graph" src="http://izuzak.wordpress.com/files/2010/01/fbgae.png" alt="Feed-buster - AppEngine request processing duration graph" width="576" height="258" /></a>
+<a href="/images/fbgae.png"><img class="aligncenter" title="Feed-buster - AppEngine request processing duration graph" src="/images/fbgae.png" alt="Feed-buster - AppEngine request processing duration graph" width="576" height="258" /></a>
 
 
 <h2>PubSubHubBub - real-time feed delivery</h2>
@@ -50,7 +50,7 @@ Lessons learned:
 </ol>
 </div>
 
-<a href="http://izuzak.wordpress.com/files/2010/01/pshbarch.png"><img class="aligncenter" title="PubSubHubBub ecosystem and protocol" src="http://izuzak.wordpress.com/files/2010/01/pshbarch.png" alt="PubSubHubBub ecosystem and protocol" width="398" height="107" /></a>
+<a href="/images/pshbarch.png"><img class="aligncenter" title="PubSubHubBub ecosystem and protocol" src="/images/pshbarch.png" alt="PubSubHubBub ecosystem and protocol" width="398" height="107" /></a>
 
 And this gives us real-time feed delivery. <strong>But what about real-time filtering and processing?</strong> How would a real-time-enabled version of Feed-buster be built? Of course, there are <a href="http://blog.postrank.com/2009/10/filtering-the-real-time-web/" target="_blank">a lot more reasons for doing this</a>, both from business and engineering perspectives.
 <h2>Real-time feed processing and filtering (take 1)</h2>
@@ -79,7 +79,7 @@ In short, these principles state that <strong>filtering services should be appli
 
 Third and last - <strong>end-user selection of these services</strong>. When 3rd party filtering/processing services exist - how will they be chosen for a particular subscription? In my opinion, this must be done by end-users and thus there must be an easy way of doing it. The first thing that comes to mind would be to extend the subscription user-interface (UI) exposed to users of subscriber applications. E.g. instead of just showing a textbox for defining the feed the users wants to follow, there could be an "Advanced" menu with textboxes for defining filtering and processing services.
 
-<a href="http://izuzak.wordpress.com/files/2010/01/pshbnew.png"><img class="aligncenter" title="New PSHB architecture and protocol outline" src="http://izuzak.wordpress.com/files/2010/01/pshbnew.png" alt="New PSHB architecture and protocol outline" width="454" height="282" /></a>
+<a href="/images/pshbnew.png"><img class="aligncenter" title="New PSHB architecture and protocol outline" src="/images/pshbnew.png" alt="New PSHB architecture and protocol outline" width="454" height="282" /></a>
 
 No matter how cool I think this would be as a core part of the PSHB protocol, it's probably a better idea doing it as an extension (as a first step?). So here's what the extension would define:
 <ol>
