@@ -23,21 +23,24 @@ procedure : function(printParam) {
               alert(printParam); } } );
 {% endhighlight %}
 
-{% highlight javascript linenos %}
+{% highlight html linenos %}
 
 // [window object B]
 
 // load pmrpc library
+<script type="text/javascript" src="pmrpc.js"></script>
 
 // create worker
-var testingWorker =
-  new Worker("testingWorker.js");
+<script type="text/javascript">
+  var testingWorker =
+    new Worker("testingWorker.js");
 
-// calls the exposed procedure
-pmrpc.call( {
-destination : testingWorker,
-publicProcedureName : "HelloPMRPC",
-params : ["Hello World!"] } );
+  // calls the exposed procedure
+  pmrpc.call( {
+  destination : testingWorker,
+  publicProcedureName : "HelloPMRPC",
+  params : ["Hello World!"] } );
+</script>
 {% endhighlight %}
 
 A few notes on worker support. Pmrpc currently supports only normal ("dedicated") Web Workers. Shared Workers (workers shared between multiple web pages) and nested workers (workers within workers) are currently not supported since, as far as I know,<strong> Shared and nested Workers are not implemented yet in any browser</strong>. Also, since Workers must be loaded from the same origin as the page that created them - the <a href="http://code.google.com/p/pmrpc/wiki/PmrpcApiDocs#Access_control" target="_blank">access control feature</a> in pmrpc make no sense and are therefore not supported for Web Workers.

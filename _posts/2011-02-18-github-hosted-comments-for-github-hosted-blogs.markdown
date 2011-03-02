@@ -25,7 +25,7 @@ First, for each blog post you plan to publish, create an issue in your blog's Gi
 
 Second, add a link to each of your blog posts pointing to the Web page of the issue you created for comments. Since, you're probably using [Jekyll](https://github.com/mojombo/jekyll) to generate your blog, a simple way of doing this is to add the above mentioned id of the issue to the [YAML front matter](https://github.com/mojombo/jekyll/wiki/YAML-Front-Matter) block of each blog post and then add a [Liquid template](https://github.com/mojombo/jekyll/wiki/Liquid-Extensions) in your [layout file](https://github.com/mojombo/jekyll/wiki/Usage) to retrieve the id and generate the full issue URL. For example, here's the YAML front matter for the blog post your reading (``commentIssueId`` is the id of the post's issue in the repository Issue tracker):
 
-{% highlight yaml %}
+{% highlight yaml linenos %}
 ---
 layout: post
 title: GitHub hosted comments for GitHub hosted blogs
@@ -38,7 +38,7 @@ commentIssueId: 12
 
 And here's the snippet of the layout file for generating blog posts (``page.commentIssueId`` part surrounded with curly braces is the Liquid template which pulls the ``commentIssueId`` of the post):
 
-{% highlight html %}
+{% highlight html linenos %}
 <div id="comments">
   <h2>Comments</h2>
   <div id="header">
@@ -49,43 +49,43 @@ And here's the snippet of the layout file for generating blog posts (``page.comm
 
 Third, add a JavaScript script to each blog posts which pulls the post's comments from the issue using the GitHub API. The [GitHub issues API](http://develop.github.com/p/issues.html) is exactly what we need here - make a JSONP request to an the API endpoint and you'll receive all the comments for a specific issue. For each comment you get the GitHub user id and gravatar id of the person who made the comment, the comment id in the issue, created and updated timestamps and the body of the comment. Again, since you're probably using Jekyll, it's easiest if you put the code in the layout file for blog posts. For example, here's the code for pulling in the comments for this blog post, using [jQuery](http://api.jquery.com/jQuery.ajax/) (notice again that you need a Liquid template to specify the URL of the issue for which you want to pull the comments):
 
-{% highlight html %}
+{% highlight html linenos %}
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 
 <script type="text/javascript">
-function loadComments(data) {  
- // ...
-}
+  function loadComments(data) {  
+   // ...
+  }
 
-$.ajax("http://github.com/api/v2/json/issues/comments/izuzak/izuzak.github.com/{{special}}", {
-  dataType : "jsonp",
-  jsonpCallback : "loadComments"
-});
+  $.ajax("http://github.com/api/v2/json/issues/comments/izuzak/izuzak.github.com/{{special}}", {
+    dataType : "jsonp",
+    jsonpCallback : "loadComments"
+  });
 </script>
 {% endhighlight %}
 
 Fourth, insert the pulled comment data into the blog post's HTML and render the body of the comments using [GitHub Flavored Markdown](http://github.github.com/github-flavored-markdown/). Inserting the comment data into the DOM is easy once you decide which data you want to display. However, since issue comments may be written in GitHub Flavored Markdown, some JavaScrip code is needed to translate the comment to HTML. Fortunately, GitHub has a [JavaScript library](https://github.com/github/github-flavored-markdown) for that also - a modified version of the [Showdown library](https://github.com/coreyti/showdown) for converting Markdown into HTML. Again, it's easiest if you put the code in the layout file for blog posts. For example, here's the code which I use for inserting comments:
 
-{% highlight html %}
+{% highlight html linenos %}
 <script type="text/javascript" src="http://github.github.com/github-flavored-markdown/scripts/showdown.js"></script>
 <script type="text/javascript" src="http://datejs.googlecode.com/svn/trunk/build/date-en-US.js"></script>
 
 <script type="text/javascript">
-function loadComments(data) {  
+  function loadComments(data) {  
 
-var converter = new Showdown.converter();
+  var converter = new Showdown.converter();
 
-  for (var i=0; i<data.comments.length; i++) {
-    var cuser = data.comments[i].user;
-    var cuserlink = "https://www.github.com/" + data.comments[i].user;
-    var clink = "https://github.com/izuzak/izuzak.github.com/issues#issue/{{special}}/comment/" + data.comments[i].id;
-    var cbody = converter.makeHtml(data.comments[i].body);
-    var cgravatarlink = "https://secure.gravatar.com/avatar/" + data.comments[i].gravatar_id;
-    var cdate = Date.parse(data.comments[i].created_at).toString("yyyy-MM-dd HH:mm:ss");
-    
-    $("#comments").append("<div class='comment'><div class='commentheader'><div class='commentgravatar'>" + '<img src="' + cgravatarlink + '" alt="" width="20" height="20">' + "</div><a class='commentuser' href=\""+ cuserlink + "\">" + cuser + "</a><a class='commentdate' href=\"" + clink + "\">" + cdate + "</a></div><div class='commentbody'>" + cbody + "</div></div>");
+    for (var i=0; i<data.comments.length; i++) {
+      var cuser = data.comments[i].user;
+      var cuserlink = "https://www.github.com/" + data.comments[i].user;
+      var clink = "https://github.com/izuzak/izuzak.github.com/issues#issue/{{special}}/comment/" + data.comments[i].id;
+      var cbody = converter.makeHtml(data.comments[i].body);
+      var cgravatarlink = "https://secure.gravatar.com/avatar/" + data.comments[i].gravatar_id;
+      var cdate = Date.parse(data.comments[i].created_at).toString("yyyy-MM-dd HH:mm:ss");
+      
+      $("#comments").append("<div class='comment'><div class='commentheader'><div class='commentgravatar'>" + '<img src="' + cgravatarlink + '" alt="" width="20" height="20">' + "</div><a class='commentuser' href=\""+ cuserlink + "\">" + cuser + "</a><a class='commentdate' href=\"" + clink + "\">" + cdate + "</a></div><div class='commentbody'>" + cbody + "</div></div>");
+    }
   }
-}
 </script>
 {% endhighlight %}
 

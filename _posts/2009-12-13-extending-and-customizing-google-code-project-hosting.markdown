@@ -24,13 +24,40 @@ The first idea for extending project sites is to <strong>embed 3-rd party conten
 	<li>Edit one of your wiki pages and create a Google Gadget element that references the URL of the uploaded specification. <strong>Note</strong> that you must reference the raw-file URL of the XML spec which you can get by viewing the uploaded file in your project's Source tab and then clicking "View raw file" under File info.</li>
 </ol>
 
-<p><a href="http://code.google.com/p/pubsubhubbub"><img class="aligncenter" title="Example 1" src="http://izuzak.files.wordpress.com/2009/12/blog_pres1.png" alt="Example 1" width="320" height="200" /></a></p> 
-
-<p><a href="http://code.google.com/p/feed-buster"><img class="aligncenter" title="Example 2" src="http://izuzak.files.wordpress.com/2009/12/blog_ff1.png" alt="Example 2" width="320" height="200" /></a></p>
-
-<p><a href="http://code.google.com/p/pmrpc/wiki/PmrpcTesting"><img class="aligncenter"  title="Example 3" src="http://izuzak.files.wordpress.com/2009/12/blog_qunit1.png" alt="Example 3" width="320" height="200" /></a></p>
-
-<p><a href="http://code.google.com/p/urlecho"><img class="aligncenter" title="Example 4" src="http://izuzak.files.wordpress.com/2009/12/blog_form1.png" alt="Example 4" width="320" height="200" /></a></p>
+<table>
+<tr>
+<td>
+<p><a href="http://code.google.com/p/pubsubhubbub"><img class="aligncenter" title="Example 1" src="http://izuzak.files.wordpress.com/2009/12/blog_pres1.png" alt="Example 1" width="90%" /></a></p> 
+</td>
+<td>
+<p><a href="http://code.google.com/p/feed-buster"><img class="aligncenter" title="Example 2" src="http://izuzak.files.wordpress.com/2009/12/blog_ff1.png" alt="Example 2" width="90%"  /></a></p>
+</td>
+</tr>
+<tr>
+<td>
+<center> 1. PubSubHubBub </center>
+</td>
+<td>
+<center> 2. Feed-buster </center>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="http://code.google.com/p/pmrpc/wiki/PmrpcTesting"><img class="aligncenter"  title="Example 3" src="http://izuzak.files.wordpress.com/2009/12/blog_qunit1.png" alt="Example 3" width="90%"  /></a></p>
+</td>
+<td>
+<p><a href="http://code.google.com/p/urlecho"><img class="aligncenter" title="Example 4" src="http://izuzak.files.wordpress.com/2009/12/blog_form1.png" alt="Example 4" width="90%" /></a></p>
+</td>
+</tr>
+<tr>
+<td>
+<center> 3. Pmrpc testing </center>
+</td>
+<td>
+<center> 4. UrlEcho </center>
+</td>
+</tr>
+</table>
 
 And here are some examples that show the usefulness of this approach (images above, in order of appearance):
 <ol style="padding-left:30px;">

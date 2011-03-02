@@ -81,6 +81,7 @@ First, <strong>the REST master reference</strong>, <a href="http://www.ics.uci.e
 <p style="text-align:justify;">The operation of an NFA automaton, as state machines are sometimes called, is described as follows. The NFA starts from the initial state and then sequentially reads one input symbol at a time each time applying the state-transition function to transfer itself to the next state. After all input symbols have been processed in this way, the NFA stops and outputs "true" if the last state is in the set of final states, or "false" otherwise. Notice that it is not defined how input symbols are generated, just that there is a sequence of them being fed to the automaton. Also notice that NFAs can nondeterministically transfer to a set of states at some point. This <strong>nondeterminism is important but also confusing</strong> - how can the automaton be at more than a single state? Well, although the formal definition indicates that the automaton is in a set of states, the practical and useful meaning is that the automaton may be at any single state from that set - we don't know which one in advance, it can be any single one. In other words, a single state from the set will be chosen in some way e.g. using probabilities.</p>
 <p style="text-align:justify;">This iterative process of automaton operation can be modeled as a system:</p>
 
+<center>
 <table>
 <tbody>
 <tr>
@@ -93,13 +94,16 @@ while there are more input symbols to process:
 </td>
 </tr>
 <tr>
-<td><img class="aligncenter" style="margin:5px;" title="sdcQSv__tPdzJu-H_MxJqTw (3)" src="http://izuzak.files.wordpress.com/2010/04/sdcqsv__tpdzju-h_mxjqtw-3.png" alt="" width="300" height="123" />
-</td>
+<td><center><img class="aligncenter" style="margin:5px;" title="sdcQSv__tPdzJu-H_MxJqTw (3)" src="http://izuzak.files.wordpress.com/2010/04/sdcqsv__tpdzju-h_mxjqtw-3.png" alt="" width="300" height="123" />
+</center></td>
 </tr>
 </tbody>
 </table>
+</center>
+
 <p style="text-align:justify;">Here, CurrentState is a component that stores the current state of the automaton, InputSymbol is a component that stores the current input symbol (element from the input alphabet), GetNextInput is a component that provides the next input symbol and writes it to the InputSymbol component and TransitionFunction is a component that computes the state transition function and writes the new state to the CurrentState component. Notice that the GetNextInput component doesn't take any input in this description. This is not entirely true, of course - the operation of the component that generates input symbols is out of scope of formal automaton definition, the component may generate input symbols based on whatever it wants. So, I'll expand the system to include the CurrentState as an input to the GetNextInput component (since there is nothing else in the model to include):</p>
 
+<center>
 <table>
 <tbody>
 <tr>
@@ -113,11 +117,12 @@ while there are more input symbols to process:
 </tr>
 <tr>
 <td>
-<img class="aligncenter" style="margin:5px;" title="sdcQSv__tPdzJu-H_MxJqTw" src="http://izuzak.files.wordpress.com/2010/04/sdcqsv__tpdzju-h_mxjqtw.png" width="300" height="123" />
-</td>
+<center><img class="aligncenter" style="margin:5px;" title="sdcQSv__tPdzJu-H_MxJqTw" src="http://izuzak.files.wordpress.com/2010/04/sdcqsv__tpdzju-h_mxjqtw.png" width="300" height="123" />
+</center></td>
 </tr>
 </tbody>
 </table>
+</center>
 
 <p style="text-align:justify;">Now the interesting part - <strong>mapping properties of RESTful user-agents to this NFA model</strong>. As I wrote before, this is a simplified first-draft-quality model, not everything that should be included is included and thus the model may change when more details do get included. First I'll try to explain the mapping in a general way, not on a specific RESTful system, and after that I'll give a concrete example:</p>
 
