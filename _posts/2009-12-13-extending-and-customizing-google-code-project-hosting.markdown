@@ -75,9 +75,24 @@ The second idea for extending project sites involves <strong>using the source r
 	<li>Create a link to the obtained URL from one of your wiki pages.</li>
 </ol>
 
-<p><a href="http://pubsubhubbub.googlecode.com/svn/trunk/pubsubhubbub-core-0.2.html"><img class="aligncenter" title="Example 1" src="/images/blog_pshb.png" alt="Example 1" width="320" height="200" /></a></p>
-
-<p><a href="http://closure-library.googlecode.com/svn/trunk/closure/goog/docs/index.html"><img class="aligncenter" title="Example 2" src="/images/blog_closure.png" alt="Example 2" width="320" height="200" /></a></p>
+<table>
+<tr>
+<td>
+<p><a href="http://pubsubhubbub.googlecode.com/svn/trunk/pubsubhubbub-core-0.2.html"><img class="aligncenter" title="Example 1" src="/images/blog_pshb.png" alt="Example 1" width="90%" /></a></p>
+</td>
+<td>
+<p><a href="http://closure-library.googlecode.com/svn/trunk/closure/goog/docs/index.html"><img class="aligncenter" title="Example 2" src="/images/blog_closure.png" alt="Example 2" width="90%" /></a></p>
+</td>
+</tr>
+<tr>
+<td>
+<center> 1. PubSubHubBub specification </center>
+</td>
+<td>
+<center> 2. Closure library API docs </center>
+</td>
+</tr>
+</table>
 
 And here are two examples that show the usefulness of this approach (images above, in order of appearance):
 <ol>
