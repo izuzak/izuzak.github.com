@@ -8,7 +8,7 @@ As promised in my <a target="_blank" href="http://ivanzuzak.info/2009/08/09/name
 
 But first, a bit of background. From mid 2007. when I was interning at Google up until today and my dissertation-related research, an issue that's consistently been popping up in anything I worked on is inter-window communication. <strong>Inter-window communication (IWC)</strong> is the process of transporting data from one window object within a browser to another window object inside the same browser. What's relevant here is that window objects are both full-size windows and iframes - window objects that can be embedded within other window objects (think of an <a target="_blank" href="http://www.igoogle.com">iGoogle</a> page and all the gadgets in it).
 
-<img src="http://images.trustedreviews.com/images/article/inline/4513-igoogle.jpg" title="iGoogle" class="aligncenter" width="362" height="172">
+<img src="http://code.google.com/gme/articles/images/mashupgadgets_igoogle.jpg" title="iGoogle" class="aligncenter" width="362" height="220">
 
 The reason why IWC is an issue is the security model of communication within browsers. <strong><a target="_blank" href="http://en.wikipedia.org/wiki/Same_origin_policy">Same Origin Policy</a></strong> (SOP), a security policy introduced to reduce security risks, restricts access of processes executing within browsers. In essence, SOP prevents a document or script loaded from one domain from getting or setting properties of a document from another domain. For example, a page loaded from <em>http://www.google.com</em> can not directly access data in an iframe loaded from <em>http://www.yahoo.com</em>.
 
