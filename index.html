@@ -30,6 +30,7 @@ talks:
       place: 11th International Conference on Web Engineering (ICWE 2011), Paphos, Cyprus
       url: /papers/2011_REST.pdf
       download: /papers/2011_REST.pdf
+      slides: /papers/2011_REST_slides.pdf
       type: paper
 
     - authors: Ivan Zuzak
@@ -37,6 +38,7 @@ talks:
       date: 3 May 2011
       place: Knowledge Media Institute, The Open University, Milton Keynes, UK
       url: http://stadium.open.ac.uk/stadia/preview.php?whichevent=1677
+      slides: /papers/2011_IWC_slides.pdf
       type: talk
 
     - authors: Ivan Zuzak, Marko Ivankovic, Ivan Budiselic
@@ -45,6 +47,7 @@ talks:
       place: 34th International Convention MIPRO, Opatija, Croatia
       url: /papers/2011_PMRPC.pdf
       download: /papers/2011_PMRPC.pdf
+      slides: /papers/2011_PMRPC_slides.pdf
       type: paper
 
     - authors: Ivan Budiselic, Ivan Zuzak, Ivan Benc
@@ -68,6 +71,7 @@ talks:
       place: International conference on Networking and Services (ICNS), San Jose, California, USA
       url: http://www.computer.org/portal/web/csdl/doi/10.1109/ICNS.2006.30
       download: /papers/2006_DACS_SOPM.pdf
+      slides: /papers/2006_DACS_SOPM_slides.pdf
       type: paper
 
 ---
@@ -127,7 +131,7 @@ talks:
       <li>
         <div class="first"><span>{{ talk.date }}</span></div>
         <div class="sep"> &raquo; </div>
-        <div class="second"><b>({{talk.type}})</b> <a href="{{talk.url}}">{{ talk.title }}</a>, <i>{{ talk.authors }}</i>, {{ talk.place }}{% if talk.download %}, <a onClick="javascript: _gaq.push(['_trackPageview', '{{talk.download}}']);" href="{{ talk.download }}">download</a> {% endif %} </div>
+        <div class="second"><b>({{talk.type}})</b> <a href="{{talk.url}}">{{ talk.title }}</a>, <i>{{ talk.authors }}</i>, {{ talk.place }}{% if talk.download %}, <a onClick="javascript: _gaq.push(['_trackPageview', '{{talk.download}}']);" href="{{ talk.download }}">download</a> {% endif %}{% if talk.slides %}, <a onClick="javascript: _gaq.push(['_trackPageview', '{{talk.slides}}']);" href="{{ talk.slides }}">slides</a> {% endif %} </div>
       </li>
     {% endfor %}
   </ul>
