@@ -131,7 +131,7 @@ talks:
       <li>
         <div class="first"><span>{{ talk.date }}</span></div>
         <div class="sep"> &raquo; </div>
-        <div class="second"><b>({{talk.type}})</b> <a href="{{talk.url}}">{{ talk.title }}</a>, <i>{{ talk.authors }}</i>, {{ talk.place }}{% if talk.download %}, <a onClick="javascript: _gaq.push(['_trackPageview', '{{talk.download}}']);" href="{{ talk.download }}">download</a> {% endif %}{% if talk.slides %}, <a onClick="javascript: _gaq.push(['_trackPageview', '{{talk.slides}}']);" href="{{ talk.slides }}">slides</a> {% endif %} </div>
+        <div class="second"><b>({{talk.type}})</b> <a href="{{talk.url}}">{{ talk.title }}</a>, <i>{{ talk.authors }}</i>, {{ talk.place }}{% if talk.download %}, <a onClick="javascript: _gaq.push(['_trackPageview', '{{talk.download}}']);" href="{{ talk.download }}">download</a>{% endif %}{% if talk.slides %}, <a onClick="javascript: _gaq.push(['_trackPageview', '{{talk.slides}}']);" href="{{ talk.slides }}">slides</a> {% endif %} </div>
       </li>
     {% endfor %}
   </ul>
