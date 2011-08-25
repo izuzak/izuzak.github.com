@@ -27,7 +27,15 @@ projects:
       url: http://code.google.com/p/feed-buster/
 
 talks:
-
+    - authors: Ivan Zuzak, Marko Ivankovic, Ivan Budiselic
+      title: "A Classification Framework for Web Browser Cross-Context Communication"
+      date: 25 August 2011
+      place: arXiv e-print archive
+      url: http://arxiv.org/abs/1108.4770
+      download: /papers/2011_CCCS.pdf
+      review: /papers/2011_CCCS_review.txt
+      type: paper
+      
     - authors: Ivan Zuzak, Ivan Budiselic, Goran Delac
       title: "Formal Modeling of RESTful Systems Using Finite-State Machines"
       date: 20 June 2011
@@ -77,7 +85,7 @@ talks:
       download: /papers/2006_DACS_SOPM.pdf
       slides: /papers/2006_DACS_SOPM_slides.pdf
       type: paper
-
+      
 ---
 
 <link rel="me" type="text/html" href="http://www.google.com/profiles/izuzak"/>
@@ -135,7 +143,7 @@ talks:
       <li>
         <div class="first"><span>{{ talk.date }}</span></div>
         <div class="sep"> &raquo; </div>
-        <div class="second"><b>({{talk.type}})</b> <a href="{{talk.url}}">{{ talk.title }}</a>, <i>{{ talk.authors }}</i>, {{ talk.place }}{% if talk.download %}, <a onClick="javascript: _gaq.push(['_trackPageview', '{{talk.download}}']);" href="{{ talk.download }}">download</a>{% endif %}{% if talk.slides %}, <a onClick="javascript: _gaq.push(['_trackPageview', '{{talk.slides}}']);" href="{{ talk.slides }}">slides</a> {% endif %} </div>
+        <div class="second"><b>({{talk.type}})</b> <a href="{{talk.url}}">{{ talk.title }}</a>, <i>{{ talk.authors }}</i>, {{ talk.place }}{% if talk.download %}, <a onClick="javascript: _gaq.push(['_trackPageview', '{{talk.download}}']);" href="{{ talk.download }}">download</a>{% endif %}{% if talk.slides %}, <a onClick="javascript: _gaq.push(['_trackPageview', '{{talk.slides}}']);" href="{{ talk.slides }}">slides</a> {% endif %}{% if talk.review %}, <a onClick="javascript: _gaq.push(['_trackPageview', '{{talk.review}}']);" href="{{ talk.review }}">peer-review comments</a> {% endif %} </div>
       </li>
     {% endfor %}
   </ul>

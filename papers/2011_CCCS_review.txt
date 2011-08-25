@@ -1,0 +1,94 @@
+Title: A Classification Framework for Web Browser Cross-Context Communication
+Authors: Ivan Zuzak, Marko Ivankovic, Ivan Budiselic
+List of peer-reviews (full reviews are below):
+  * WWW2011 (http://www.www2011india.com/) -- rejected.
+  * JWE (http://www.rintonpress.com/journals/jwe/) -- rejected.
+
+=============================================================================
+
+
+JWE
+
+Submitted -- May 11 2011
+Notification -- August 11 2011
+
+
+Comments to the authors
+
+In the last years I have been working on a variety of web apps and mashups that required cross-context communication. A real mess, especially if it comes to supporting multiple browsers. So, I really liked the survey of communication APIs and libraries provided in this manuscript, and I learned some interesting new insights. The authors demonstrate profound knowledge of the problems and their solutions, which is reflected in the details of the evaluation framework, and they provide the reader with the necessary background knowledge. The paper is well written and reads easily. It may have a high practical value, which may however expire relatively fast, as technologies evolve rapidly. 
+
+After the compliments, I also have to complain: The authors did a thorough study of the state of the art in cross-context communication in web browsers, but they did not turn the lessons they learned into some kind of scientific contribution. After reading the paper, the reader has even the feeling that the authors themselves consider the manuscript like something that is in continuous evolution, they criticize the week points of their evaluation framework (section 5), don’t actually analyze the result of their study, and do not propose any solution or novel research direction for any of the identified issues. The conclusions they draw are arbitrary (that is, not directly related to the performed study) and relatively obvious/trivial.
+
+For instance, it is not necessary to do the kind of survey the authors did in order to conclude that “cross-context communication systems should hide the complexity of cross-context communication by providing high-level functionalities.” Same for the comments regarding research on performance and liability. These are all aspects the efforts on cross-context communication libraries and the W3C standardizations are trying to address already. So, nothing new here. The future work by the authors themselves, instead, concentrates on the extension of the evaluation framework to also take into account performance. 
+
+So, in conclusion, I do think the authors have all the necessary knowledge and competence to write a nice paper, and that the topic of their work is relevant and timely. As the paper is right now, I however feel it neither provides new insights, nor novel concepts or solutions. I would like to ask the authors to rework their paper, and to submit a new version of it. Here some suggestions:
+
+The first paragraph of the intro is a bit messy. Try to rephrase of focus better on the key message. 
+
+Define early in the text the concept of context.
+
+The related work section is partly overlapping with the actual survey. Try to distinguish better. 
+
+The classification framework contains a lot of knowledge. But where does it come from? That is, the framework must somehow be motivated, e.g., by specific requirements you are looking for. For instance, it is not clear why synchronicity is not part of the framework. You explain it in the final discussion, but this should probably be in the framework. Or, why is there a need for discovery? Etc.
+
+In section 4.2, you say you restrict the evaluation to a subset of systems and framework dimensions. Which ones do you leave out of the analysis? Why? If you anyway did the analysis and only cut it for the paper, you could provide a link to an online spreadsheet with the full analysis and provide only the summary in the paper. 
+
+You introduce dimension in your framework that you don’t evaluate. For example, all the security-related dimensions like confidentiality, integrity, and authentication are not addressed here, and the browser support is neglected. There is no need for dimensions if they are not discussed in the analysis.
+
+The three tables contain a lot of information, but such is not conceptualized in any form. Meaning, it looks like the goal was filling three tables, not to derive some new insight from the table. If you also add the time dimension to your framework, e.g., the release date of the described libraries, you could for instance reason about the evolution of cross-context communication techniques and try to project some lessons learned into the future. Maybe – I’m just guessing now – you could identify a trend toward pubsub solutions and away from RPC approaches… What do you expect will the effect of the W3C standardization efforts be on these communication libraries? Given you insights, wow do you think will the web apps of tomorrow be different from the ones of today? 
+
+In short: Motivate each dimension. Analyze each dimension for each library/API. Draw conclusions from the analysis, so that they are backed by real data.
+
+Recommendation: Reject
+ 
+ 
+=============================================================================
+ 
+ 
+ 
+WWW2011 
+
+Submitted -- 19.10.2010.
+Notification -- January 14 2011
+ 
+ 
+ 
+---------------------------- REVIEW 1 --------------------------
+
+OVERALL RATING: -4 (Will fight to reject, even with a champion)
+REVIEWER'S CONFIDENCE: 3 (high)
+What is the rank of this submission in your pile?: 5 (5)
+Is the submission worth considering for the Posters track?: 2 (yes)
+
+The same origin policy in web browsers restricts communication between content that has been loaded from different domains. This can be awkward for web sites that mash up content from multiple different sources or embed widgets from other domains. Fortunately, a variety of techniques exist for cross-domain communication, and cross-domain postMessage is part of the HTML5 standard, supported by the current releases of all major browsers (IE6/7 doesn't support it, but IE8 does).
+
+This paper presents a survey of the various libraries that exist now for cross-domain communication. The main contribution of the paper is a table in which the columns are the libraries, and the rows are different features that the libraries may or may not have.
+
+I can imagine that this table might be useful for some web developers, but it seems to be too small a contribution for a WWW paper. All the information in the table can be easily obtained elsewhere, and the techniques described have been described in more depth by other papers. This paper does not seem to contribute any important new insights.
+
+---------------------------- REVIEW 2 --------------------------
+
+OVERALL RATING: -2 (Probable reject, unless someone champions)
+REVIEWER'S CONFIDENCE: 3 (high)
+What is the rank of this submission in your pile?: 1 (best)
+Is the submission worth considering for the Posters track?: 1 (no)
+
+The paper introduces and compares the different approaches that exist for communication between contexts of web browsers. I enjoy reading this paper. The topic is certainly interesting, the approach is systematic and complete, and the writing is good.
+
+Proposed dimensions are well-thought. The paper could be improved if an aggregation of the dimensions is provided. As a future work, it will be interesting if a guideline is given depending of the profile of the web application (mashups, portals, …).
+
+Table 1 is one of the main outcomes of the paper. Since you still have room, it would be convenient to split data along three tables with larger fonts.
+
+Seems to be a mistake in the comparative table. In the column “postMessage”, the Sender authorization dimension is supported with the target parameter. Please refer to http://www.whatwg.org/specs/web-apps/current-work/multipage/comms.html#dom-window-postmessage.
+
+---------------------------- REVIEW 3 --------------------------
+
+OVERALL RATING: -2 (Probable reject, unless someone champions)
+REVIEWER'S CONFIDENCE: 2 (medium)
+What is the rank of this submission in your pile?: 5 (5)
+Is the submission worth considering for the Posters track?: 1 (no)
+
+This paper presents a classification and comparison framework for cross-context communication in existing Web browsers and various plugins. The original of the cross-context communication in browsers is a security concern that allows communication between browser execution contexts only from the same origin.
+
+The paper is well written and insightful on the issue of cross-context communication, as well as the comparison result based on the presented framework (in Table 1) is informative and comprehensive. However, the paper is more of survey style (suitable for a magazine or journal type of papers) and less suitable for a conference such as WWW that expects innovative contributions to the field. What is also missing is suggestions on how to tackle the issue going forward or introduction of approaches/techniques that shed light on how to overcome this problem while the main issues (e.g., ,the security concern) are still addressed.
+ 
