@@ -23,7 +23,6 @@ layout: default
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script type="text/javascript" src="http://datejs.googlecode.com/svn/trunk/build/date-en-US.js"></script>
-<script type="text/javascript" src="http://github.github.com/github-flavored-markdown/scripts/showdown.js"></script>
 
 <div id="comments">
   <h2>Comments</h2>
@@ -34,23 +33,23 @@ layout: default
 
 <script type="text/javascript">
 
-var converter = new Showdown.converter();
-
-function loadComments(data) {  
-  for (var i=0; i<data.data.length; i++) {
-    var cuser = data.data[i].user.login;
-    var cuserlink = "https://www.github.com/" + data.data[i].user.login;
-    var clink = "https://github.com/izuzak/izuzak.github.com/issues/{{page.commentIssueId}}#issuecomment-" + data.data[i].url.substring(data.data[i].url.lastIndexOf("/")+1);
-    var cbody = converter.makeHtml(data.data[i].body);
-    var cavatarlink = data.data[i].user.avatar_url;
-    var cdate = Date.parse(data.data[i].created_at).toString("yyyy-MM-dd HH:mm:ss");
-    
-    $("#comments").append("<div class='comment'><div class='commentheader'><div class='commentgravatar'>" + '<img src="' + cavatarlink + '" alt="" width="20" height="20">' + "</div><a class='commentuser' href=\""+ cuserlink + "\">" + cuser + "</a><a class='commentdate' href=\"" + clink + "\">" + cdate + "</a></div><div class='commentbody'>" + cbody + "</div></div>");
+  function loadComments(data) {  
+    for (var i=0; i<data.length; i++) {
+      var cuser = data[i].user.login;
+      var cuserlink = "https://www.github.com/" + data[i].user.login;
+      var clink = "https://github.com/izuzak/izuzak.github.com/issues/{{page.commentIssueId}}#issuecomment-" + data[i].url.substring(data[i].url.lastIndexOf("/")+1);
+      var cbody = data[i].body_html;
+      var cavatarlink = data[i].user.avatar_url;
+      var cdate = Date.parse(data[i].created_at).toString("yyyy-MM-dd HH:mm:ss");
+      
+      $("#comments").append("<div class='comment'><div class='commentheader'><div class='commentgravatar'>" + '<img src="' + cavatarlink + '" alt="" width="20" height="20">' + "</div><a class='commentuser' href=\""+ cuserlink + "\">" + cuser + "</a><a class='commentdate' href=\"" + clink + "\">" + cdate + "</a></div><div class='commentbody'>" + cbody + "</div></div>");
+    }
   }
-}
 
-$.ajax("https://api.github.com/repos/izuzak/izuzak.github.com/issues/{{page.commentIssueId}}/comments", {
-  dataType : "jsonp",
-  jsonpCallback : "loadComments"
-});
+  $.ajax("https://api.github.com/repos/izuzak/izuzak.github.com/issues/{{page.commentIssueId}}/comments", {
+    headers: {Accept: "application/vnd.github.full+json"},
+    success: function(msg){
+      loadComments(msg);
+   }
+  });
 </script>
