@@ -5,6 +5,8 @@ commentIssueId: 9
 ---
 <em><strong>EDIT 29 August 2011: I've published a paper on the FSM-based formalism for describing RESTful systems at the <a href="http://icwe2011.webengineering.org/">ICWE 2011 conference</a>. The formalism presented in the paper is a more detailed and advanced version of the one presented in the second part of this blog post. Links for downloading the paper and presentation slides are in the <a href="http://ivanzuzak.info/#talks">talks and papers section</a>.</strong></em>
 
+<em><strong>EDIT 25 January 2012: I've published another paper on the FSM-based formalism for RESTful systems, this time in the <a href="http://www.rintonpress.com/journals/jwe/">Journal of Web Engineering</a>. This paper is again a revised and extended version of the previous paper. Furthermore, the paper explores the practical challenges and benefits of using the presented formalism. Again, for more details see the <a href="http://ivanzuzak.info/#talks">talks and papers section</a>.</strong></em>
+
 <em>This is going to be another long post, so I'm using the introduction as an overview again.</em>
 
 <em><span style="font-family:Verdana;font-style:normal;line-height:normal;"> </span></em>
