@@ -23,6 +23,7 @@
     <a class="extra" href="/#projects">projects</a>
     <a class="extra" href="/#talks">talks & papers</a>
     <a class="extra" href="/#other">other</a>
+    <g:plusone size="small"></g:plusone>
   </div>
   
   {{ content }}
@@ -47,7 +48,6 @@
 
 <!-- Google Analytics -->
 <script type="text/javascript">
-
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-20321488-1']);
   _gaq.push(['_trackPageview']);
@@ -57,9 +57,16 @@
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
-
 </script>
 <!-- Google Analytics end -->
+
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
 
 </body>
 </html>
