@@ -87,7 +87,7 @@ ul.posts {
   }
   
   ul.posts li .second {
-    width: 30.5em;
+    width: 40.5em;
     display: inline-block;
   }
 
@@ -98,9 +98,9 @@ ul.posts {
 /*****************************************************************************/
 
 .site {
-  font-size: 110%;
+  font-size: 120%;
   text-align: justify;
-  width: 40em;
+  width: 50em;
   margin: 3em auto 2em auto;
   line-height: 1.5em;
 }
@@ -140,6 +140,7 @@ ul.posts {
     border-top: 4px solid #eee;
     margin-top: 2em;
     overflow: hidden;
+    padding-left: 15em;
   }
 
     .site .footer .contact {
@@ -160,6 +161,7 @@ ul.posts {
     .site .footer .gplus {
       float: left;
       padding-top: 1.3em;
+      margin-right: 3em;
     }
 
 /*****************************************************************************/
