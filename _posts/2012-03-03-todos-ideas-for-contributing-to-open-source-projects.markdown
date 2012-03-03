@@ -9,8 +9,8 @@ I often talk to students that want to contribute to open-source projects, but ju
 Here's a tip if you're in a similar situation (e.g. you want to apply for [GSOC](http://code.google.com/soc/)) :
 
 {% highlight bash linenos %}
-git clone repository_url_of_some_open_source_project target_directory_
-grep -RIn TODO target_directory/*_
+git clone repository_url_of_some_open_source_project target_directory
+grep -RIn TODO target_directory/*
 {% endhighlight %}
 
 So, __find the URL of the repository project you want to contribute to, checkout the repository using git/mercurial/svn and then find all the TODOs in the source code using grep__. 
@@ -88,7 +88,7 @@ Here's the number of TODOs for the top 15 watched projects on GitHub:
       <td>2</td>
     </tr>
     <tr>
-      <td>jquery-mbile</td>
+      <td>jquery-mobile</td>
       <td>60</td>
     </tr>
     <tr>
