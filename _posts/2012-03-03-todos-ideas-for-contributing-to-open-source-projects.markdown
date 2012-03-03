@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Forgotten TODOs: ideas for contributing to open-source projects
+title: "Forgotten TODOs: ideas for contributing to open-source projects"
 tags: open-source, ideas, programming, grep
 commentIssueId: 14
 ---
