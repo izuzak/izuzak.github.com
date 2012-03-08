@@ -250,7 +250,8 @@ img.aligncenter {
   border-bottom-style: solid;
   border-bottom-width: 1px;
   color: black;
-  background-image: url(https://assets2.github.com/images/modules/comments/metabar.gif);
+  background-image: -webkit-linear-gradient(#F8F8F8,#E1E1E1);
+  background-image: -moz-linear-gradient(#F8F8F8,#E1E1E1);
   color: black;
   display: block;
   float: left;
