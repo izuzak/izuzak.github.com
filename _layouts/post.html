@@ -24,6 +24,16 @@ layout: default
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script type="text/javascript" src="http://datejs.googlecode.com/svn/trunk/build/date-en-US.js"></script>
 
+<script type="text/javascript">
+  $("#post p").each( function(index) {
+    if (index > 0 && $.trim($(this).text()).length > 0) {
+      $(this).attr("id", "par" + index.toString);
+      var html = $(this).html();
+      $(this).html(html + " <a href='#par" + index.toString() + "'>#</a>");
+    }
+  });
+</script>
+
 <div id="comments">
   <h2>Comments</h2>
   <div id="header">
