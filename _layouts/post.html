@@ -25,7 +25,7 @@ layout: default
 <script type="text/javascript" src="http://datejs.googlecode.com/svn/trunk/build/date-en-US.js"></script>
 
 <script type="text/javascript">
-  $("#post p").each( function(index) {
+  $("#post p,#post li").each( function(index) {
     if (index > 0 && $.trim($(this).text()).length > 0) {
       $(this).attr("id", "par" + index.toString());
       var html = $(this).html();
