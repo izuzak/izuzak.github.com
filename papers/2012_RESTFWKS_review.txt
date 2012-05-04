@@ -1,0 +1,147 @@
+Title: "ArRESTed Development: Guidelines for Designing REST Frameworks"
+Authors: Ivan Zuzak, Silvia Schreier
+List of peer-reviews (full reviews are below):
+  * IEEE Internet Computing, July/Aug 2012 - Special issue on Programmatic
+    Interfaces for Web Applications -- accepted
+
+==============================================================================
+
+Reviewer: 1
+
+Recommendation: Author Should Prepare A Major Revision For A Second Review
+
+Comments:
+While the problem is very interesting and relevant, the actual contributions seem to lack novelty. The need for guidelines (in as detailed a manner as you have proposed) is often debated amongst developers, but the paper does not really motivate the problem strongly. I would also recommend you to take a look at the other comments and try to add more in both your treatment of the framework (from a theoretical point of view) and include other systems in your evaluation.
+
+Additional Questions:
+2. What is the most appropriate forum for the publication of this manuscript? : IEEE Magazine (general interest explanatory article with technical contributions)
+
+1. How relevant is this manuscript to the readers of this periodical? Please explain your rating in the Detailed Comments section. : Relevant
+
+1. Please summarize what you view as the key point(s) of the manuscript and the importance of the content to the readers of this periodical. : The paper proposes a set of guidelines to
+aid / standardize RESTful application development. The main contributions of the paper include:
+
+1. A set of guidelines for overall development of a RESTful system: These recommend the separation of the development process into Framework, Client, and Server side components; The authors propose a set of guidelines for reach of these components.
+2. Guidelines for developing the client for RESTful systems: These include separation of protocol, hypermedia request, and application
+level modules, handling validation and errors (such as resource navigability based on current client state), and the ability of COD (such as Javascript) to read / update and process the client state information.
+3. Server-side guidelines: including resource type definition and classification based on content and relation to other resource types, mapping between resources and behavior modeling.
+In addition to these, the paper also provides development models that incorporate these guidelines. The paper provides an analysis of existing frameworks in light of the specified guidelines.
+
+2. Is the manuscript technically sound? Please explain your answer in the Detailed Comments section. : Partially
+
+3. What do you see as this manuscript's contribution to the literature in this field?: A set of comprehensive guidelines for architecting RESTful systems has been missing and the need for one such is always being debated. The paper proposes to address this challenge.
+
+4. What do you see as the strongest aspect of this manuscript?: The strongest aspects include the problem definition, the clarity of the definitions, and the description of the proposed framework.
+
+5. What do you see as the weakest aspect of this manuscript?: Having read the paper, it is not clear what is the novel aspect of this work. Let us consider the example of a stock Web app (CSS, HTML, Javascript (using some library like jQuery). A client for a RESTful application typically requires the ability to manipulate the DOM and thus developers already use javascript for read/write access of both the client state and data. Furthermore, RESTful interaction (using XMLHTTPRequest) already mandates (though does not rigorously enforce) handling of various response states and often this is written as a separate method (again the best practice for today). The latter practice ensures that different response codes are handled appropriately. Thus, the practice today, while not as codified as it is done in the paper, already adheres to the guidelines in most respects. There are such examples on the server side as well. The paper also lacks a strong motivation. The introduction talks about lack of tooling support for REST, especially in comparison with WS-*. I strongly disagree with this assertion by the authors. Mashups, a popular way of developing client side RESTful applications, have a reasonable set of tools that support development (Yahoo pipes, JackBe, Convertigo eclipse plugin to name a few). I would request the authors to compare a few these tools in the same manner as they have done for RESTful frameworks. That said, I am still not sure why the authors mentioned tooling support as one of the motivations (at least that is how it comes off for a reader) in the introduction, but do not talk about them in the latter sections of the paper. Also, the authors mention that frameworks should provide a greater level of separation of concerns, but do not present a convincing argument as to why it should be so. I would request the authors to address this. The same with the need for theoretical frameworks.
+While the authors argue for a need for theoretical frameworks, the rest of the work does not seem to fulfill this motivation. I was expecting a stronger theoretical approach such as a model that one can develop and verify before going to the development / deployment cycle. While the guidelines seem to help with the model, I could not find anything that would help in verification.
+
+1. Does the manuscript contain title, abstract, and/or keywords?: Yes
+
+2. Are the title, abstract, and keywords appropriate? Please elaborate in the Detailed Comments section.: Yes
+
+3. Does the manuscript contain sufficient and appropriate references (maximum 15)? Please elaborate in the Detailed Comments section.: References are sufficient and appropriate
+
+4. Does the introduction clearly state a valid thesis? Please explain your answer in the Detailed Comments section.: Could be improved
+
+5. How would you rate the organization of the manuscript? Please elaborate in the Detailed Comments section.: Could be improved
+
+6. Is the manuscript focused? Please elaborate in the Detailed Comments section.: Satisfactory
+
+7. Is the length of the manuscript appropriate for the topic? Please elaborate in the Detailed Comments section.: Satisfactory
+
+8. Please rate and comment on the readability of this manuscript in the Detailed Comments section.: Readable - but requires some effort to understand
+
+9. Please rate and comment on the timeliness and long term interest of this manuscript to IC readers in the Detailed Comments section. Select all that apply.: Topic and content are of immediate and continuing interest to IC readers
+
+Please rate the manuscript. Explain your choice in the Detailed Comments section.: Fair
+
+==============================================================================
+
+Reviewer: 2
+
+Recommendation: Accept If Certain Minor Revisions Are Made
+
+Comments:
+I'd like to see the paper tie REST framework guidelines to a concrete example and explain how each guideline enhances the development experience if it is followed.  I'd also like the authors to state their opinion on the relative importance of each guideline.  In other words, not every framework mentioned in the concluding table implements every guideline.  Which guidelines are more important than others?  Which guidelines are more personal preference over technical requirement?  Being a framework developer myself, my opinion is that some of the guidelines SHOULD NOT be provided as features of a framework.  I'd like to see what the authors think here as this is valuable information for both the framework and application developer.
+
+Additional Questions:
+2. What is the most appropriate forum for the publication of this manuscript? : IEEE Conference Proceedings (focused report with technical depth)
+
+1. How relevant is this manuscript to the readers of this periodical? Please explain your rating in the Detailed Comments section. : Interesting - but not very relevant
+
+1. Please summarize what you view as the key point(s) of the manuscript and the importance of the content to the readers of this periodical. : The manuscript tries to identify the key aspects, features, and functionality REST frameworks should provide to application developers and how application developers should interact with the framework.  While I do think it could be used as a checklist/guideline for developers reviewing RESTful frameworks to build their applications with, some of the checklist items are debatable in their actual value.  Also, as a framework developer myself, I'm not sure I fully agree with their separation of concerns.
+
+2. Is the manuscript technically sound? Please explain your answer in the Detailed Comments section. : Appears to be - but didn't check completely
+
+3. What do you see as this manuscript's contribution to the literature in this field?: May be of some use in evaluating RESTful frameworks.
+
+4. What do you see as the strongest aspect of this manuscript?: Identification of features and separation of concerns for REST frameworks are strongest aspects.  The detailed table at the end of the paper that lists guidelines and how each referenced framework meets those guidelines paints the best picture to what the authors are trying to express in the paper.
+
+5. What do you see as the weakest aspect of this manuscript?: The paper doesn't do enough to explain what the guidelines are to real-world examples.  There are weak references to other papers, but I'd like to see more real-world examples.  Maybe this is a typical IEEE paper though?  Short, and details referenced in other papers?
+
+1. Does the manuscript contain title, abstract, and/or keywords?: Yes
+
+2. Are the title, abstract, and keywords appropriate? Please elaborate in the Detailed Comments section.: Yes
+
+3. Does the manuscript contain sufficient and appropriate references (maximum 15)? Please elaborate in the Detailed Comments section.: References are sufficient and appropriate
+
+4. Does the introduction clearly state a valid thesis? Please explain your answer in the Detailed Comments section.: Yes
+
+5. How would you rate the organization of the manuscript? Please elaborate in the Detailed Comments section.: Satisfactory
+
+6. Is the manuscript focused? Please elaborate in the Detailed Comments section.: Satisfactory
+
+7. Is the length of the manuscript appropriate for the topic? Please elaborate in the Detailed Comments section.: Could be improved
+
+8. Please rate and comment on the readability of this manuscript in the Detailed Comments section.: Readable - but requires some effort to understand
+
+9. Please rate and comment on the timeliness and long term interest of this manuscript to IC readers in the Detailed Comments section. Select all that apply.: Topic and content are likely to be of growing interest to IC readers over the next 12 months
+
+Please rate the manuscript. Explain your choice in the Detailed Comments section.: Fair
+
+==============================================================================
+
+Reviewer: 3
+
+Recommendation: Accept If Certain Minor Revisions Are Made
+
+Comments:
+I like the completeness of this paper; it's quite thorough. To make it more appealing to the reader, though, the guidelines it proposes need to be described in terms of some available frameworks to help readers evaluate the guidelines in a practical manner. This information is in the paper, but it's left almost as an afterthought.
+
+The solution is to move the information currently presented at the end of the paper in Table 1 into the body of the paper, and adding some textual description for the various frameworks into the paper itself.
+
+Additional Questions:
+2. What is the most appropriate forum for the publication of this manuscript? : IEEE Magazine (general interest explanatory article with technical contributions)
+
+1. How relevant is this manuscript to the readers of this periodical? Please explain your rating in the Detailed Comments section. : Very Relevant
+
+1. Please summarize what you view as the key point(s) of the manuscript and the importance of the content to the readers of this periodical. : The paper explains the details of capabilities, responsibilities, and components required for the development of RESTful systems.
+
+2. Is the manuscript technically sound? Please explain your answer in the Detailed Comments section. : Yes
+
+3. What do you see as this manuscript's contribution to the literature in this field?: The main contribution is the detailed breakdown of requirements and responsibilities required for the development of RESTful systems.
+
+4. What do you see as the strongest aspect of this manuscript?: The strongest aspect of the manuscript is the level of detail it provides for both client and server sides.
+
+5. What do you see as the weakest aspect of this manuscript?: It needs to describe modern frameworks and their capabilities in terms of the paper's guidelines. his is currently left as almost an afterthought.
+
+1. Does the manuscript contain title, abstract, and/or keywords?: Yes
+
+2. Are the title, abstract, and keywords appropriate? Please elaborate in the Detailed Comments section.: Yes
+
+3. Does the manuscript contain sufficient and appropriate references (maximum 15)? Please elaborate in the Detailed Comments section.: References are sufficient and appropriate
+
+4. Does the introduction clearly state a valid thesis? Please explain your answer in the Detailed Comments section.: Yes
+
+5. How would you rate the organization of the manuscript? Please elaborate in the Detailed Comments section.: Satisfactory
+
+6. Is the manuscript focused? Please elaborate in the Detailed Comments section.: Satisfactory
+
+7. Is the length of the manuscript appropriate for the topic? Please elaborate in the Detailed Comments section.: Satisfactory
+
+8. Please rate and comment on the readability of this manuscript in the Detailed Comments section.: Readable - but requires some effort to understand
+
+9. Please rate and comment on the timeliness and long term interest of this manuscript to IC readers in the Detailed Comments section. Select all that apply.: Topic and content are of immediate and continuing interest to IC readers
+
+Please rate the manuscript. Explain your choice in the Detailed Comments section.: Good

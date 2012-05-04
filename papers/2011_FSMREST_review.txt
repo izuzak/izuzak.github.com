@@ -1,0 +1,73 @@
+Title: Formal Modeling of RESTful Systems Using Finite-State Machines
+Authors: Ivan Zuzak, Ivan Budiselic and Goran Delac
+List of peer-reviews (full reviews are below):
+  * ICWE 2011 - accepted
+
+----------------------- REVIEW 1 ---------------------
+OVERALL RATING: 1 (weak accept)
+REVIEWER'S CONFIDENCE: 3 (high)
+How well does the submission fit to ICWE?: 4 (good)
+Methodical soundness: 3 (fair)
+Novelty: 4 (good)
+Technical soundness and evaluation: 2 (poor)
+Reproducibility and reusability (e.g. via source code, online demo etc.): 2 (poor)
+BEST PAPER AWARD CANDIDATE (please choose Yes only if the overall evaluation is accept or higher): 1 (no)
+Is the submission suitable as a poster?: 1 (yes)
+
+the paper describes a way of modeling RESTful systems using FSMs (specifically, the e-NFA variant). the overview of related work is very thorough and impressively large. however, it mixes together things that have been created with different goals in mind (for example, documentation only and not necessarily a formal model), and for some of these goals, a simpler model may be appropriate.
+
+while the paper does present a simple example, i am not convinced that the model as it is now will result in manageable models foe more complicated real-world examples. state explosion is very likely to happen, in particular with the e-states. once models become very large, the question then is what the model could be used for; it ceases to be useful for documentation or other human-oriented purposes.
+
+and that's the more general problem of the paper as it is now: a model by itself has little value unless it is used for some purpose. the paper mentions all kinds of ideas how a model could be useful, but a very good route for the work would be to first focus on goals, and then try to achieve them. modeling never is an exercise in itself, it should always be done with a purpose and then test the result against the goals.
+
+generally speaking, the paper is looking at a very interesting space and it certainly would be good to have more/better models for REST, but it seems that right now the paper starts from the assumption that there is the one and true REST model that only needs to be found, and that's probably not a good starting assumption for this kind of work. WADL, for example, was very focused on helping implementers, so it has strong support for URIs and binding code to URIs so that it becomes easier to generate a skeleton for RESTful services. and for certain scenarios, this is probably a useful and good model, but for others (where link opacity is required), the model is not a good fit.
+
+remarks: "World Wide Web" (spaces), "Representational State Transfer" (not "REpre…")
+
+
+----------------------- REVIEW 2 ---------------------
+PAPER: 63
+TITLE: Formal Modeling of RESTful Systems Using Finite-State Machines
+AUTHORS: Ivan Zuzak, Ivan Budiselic and Goran Delac
+
+OVERALL RATING: 1 (weak accept)
+REVIEWER'S CONFIDENCE: 2 (medium)
+How well does the submission fit to ICWE?: 4 (good)
+Methodical soundness: 4 (good)
+Novelty: 3 (fair)
+Technical soundness and evaluation: 3 (fair)
+Reproducibility and reusability (e.g. via source code, online demo etc.): 3 (fair)
+BEST PAPER AWARD CANDIDATE (please choose Yes only if the overall evaluation is accept or higher): 1 (no)
+Is the submission suitable as a poster?: 1 (yes)
+
+The authors present an approach to formalizing RESTful systems using nondeterministic finite-state machines with epsilon transitions. Requests are translated into input symbols consumed by transition functions. e-transition functions may change the state without request, i.e., server-side events trigger e-transition functions.
+
+This paper is very well written and easy to follow. Furthermore, it covers the interesting topic of modeling and formalizing software, which is even more important in the field of web engineering, where external services are included quite likely and different client states have to be handled. This leads me to my main concerns about this approach, as also stated in the conclusion of the paper. In my opinion, there are few systems, where the state set is finite, as states of external services are not manageable. Even if the states are finite, the state set gets huge and the e-NFA becomes unreadable. Further, I doubt that each distinct value included in a resource has to be represented as own state, like the different temperature values of the example in the paper. However, the aggregation approach stated for future work is therefore a reasonable idea.
+
+
+----------------------- REVIEW 3 ---------------------
+PAPER: 63
+TITLE: Formal Modeling of RESTful Systems Using Finite-State Machines
+AUTHORS: Ivan Zuzak, Ivan Budiselic and Goran Delac
+
+OVERALL RATING: 2 (accept)
+REVIEWER'S CONFIDENCE: 4 (expert)
+How well does the submission fit to ICWE?: 5 (excellent)
+Methodical soundness: 5 (excellent)
+Novelty: 3 (fair)
+Technical soundness and evaluation: 4 (good)
+Reproducibility and reusability (e.g. via source code, online demo etc.): 4 (good)
+BEST PAPER AWARD CANDIDATE (please choose Yes only if the overall evaluation is accept or higher): 1 (no)
+Is the submission suitable as a poster?: 1 (yes)
+
+A well written paper which systematically maps the REST principles and constraints to the e-NFA formalism. The paper makes a good contribution to giving a formal foundation to the REST architectural style and shows that a simple formalism such as automata is good enough to cover 98% of the style (features such as layering/intermediaries, caching and conneg are left for future work).
+
+The weakest part of the paper is the example, which could have been centered on a RESTful API as opposed to a plan weather website. Likewise the "e-transition where the color of the link changes" appears to be a bit contrived.
+
+The discussion on steady states should better clarify what is the relationship between the state and the corresponding resource identifier. If getting the /main page does not bring the client to rest because the linked embedded resource /script is missing, then how can the client know that it has reached a steady state if it is still browsing the same URI /main? In other words, should the embedding of the linked /script resource be considered as some kind of composition of representations (as the linked /script resource is fetched and its representation embedded into the one of the /main resource) and not as a state transition?
+
+The authors should also mention how well the formalism is supposed to scale to complex RESTful APIs, considering that most state machine-based approaches suffer from state explosion problems when scaling to more complex models.
+
+Overall, a good paper making a solid contribution to the exegesis of Dr. Fielding's thesis.
+
+Typo: <scrip>
