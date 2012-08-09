@@ -91,6 +91,11 @@ ul.posts {
     display: inline-block;
   }
 
+  .notice {
+    font-style: italic;
+    font-size: 80%;
+  }
+
 /*****************************************************************************/
 /*
 /* Site
