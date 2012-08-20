@@ -5,6 +5,21 @@ tags: github, pubsubhubbub, feed, atom, webhooks, appengine
 commentIssueId: 11
 ---
 
+*__EDIT (August 20 2012)__:* [Sergey Lukin](https://github.com/sergeylukin) has been doing some digging and discovered two very interesting things which make some of the claims in my post no longer valid.
+
+First, GitHub now allows URL query parameters in post-commit Web hooks. Although this isn't mentioned in [the official docs](https://help.github.com/articles/post-receive-hooks), it just works. In other words, you can specify a Web hook URL like ```http://your.server.com/web_hook_resource?param1=value1&param2=value2``` and GitHub will make a POST request to the full URL, without discarding the query parameters, as before.
+
+Second, the reference PubSubHubBub hub at http://pubsubhubbub.appspot.com doesn't strictly follow the [PSHB specification with regard to the parameters passed in the new content notification HTTP POST request](http://pubsubhubbub.googlecode.com/svn/trunk/pubsubhubbub-core-0.3.html#anchor9). Specifically, the spec says that the hub will read the notification parameters from the HTTP request *body*. However, the notification request will be correctly processed even if the parameters are specified as URL query parameters, not in the message body. The reason why this works is that the reference hub is hosted on Google's AppEngine and implemented using the webapp2 Python framework. This framework [parses parameters both from the message body and URL query part and exposes them as a single object](http://webapp-improved.appspot.com/guide/request.html ), making it irrelevant how a parameter was actually passed.
+
+The result of these two discoveries is that you no longer need to use a proxy server to ping a PSHB hub using GitHub post-commit hooks, as described in the blog post below. You can just use a direct Web Hook to the reference hub. For example, I would specify this URL as the Web Hook to ping the hub when my blog's ATOM feed is updated: ```http://pubsubhubbub.appspot.com/publish?hub.mode=publish&hub.url=http%3A%2F%2Fivanzuzak.info%2Fatom.xml```. Just replace the value of the hub.url parameter with your blog's ATOM/RSS feed URL and that's it!
+
+However, again, notice that this works only because the reference PSHB hub is not strictly following the PSHB specification. If you are using another PSHB hub, check that it can accept parameters passed in the URL query part. 
+
+Great work, Sergey!!
+
+<hr/>
+
+
 I've recently switched from a [Wordpress.com hosted blog](http://izuzak.wordpress.com/) to a [GitHub hosted blog](http://ivanzuzak.info) on a custom domain using [GitHub Pages](http://pages.github.com/). And one of the first things I wanted to enable for the new blog was [PubSubHubBub](http://code.google.com/p/pubsubhubbub/) (PSHB) support. Generally, in order to enable PSHB for a blog, two things need to be done:
 
 1) add a `<link rel="hub" href="http://url.of.a.pshb.hub" />` to the blog's ATOM feed, linking to a PSHB hub, e.g. the reference hub running on appengine `http://pubsubhubbub.appspot.com` (see [PSHB specification Section 5. - Discovery](http://pubsubhubbub.googlecode.com/svn/trunk/pubsubhubbub-core-0.3.html#discovery))
