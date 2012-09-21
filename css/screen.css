@@ -77,7 +77,7 @@ ul.posts {
   }
   
   ul.posts li .first {
-    width: 8em;
+    width: 8.5em;
     display: inline-block;
   }
   
@@ -87,7 +87,7 @@ ul.posts {
   }
   
   ul.posts li .second {
-    width: 40.4em;
+    width: 40.0em;
     display: inline-block;
   }
 
