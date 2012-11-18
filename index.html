@@ -43,6 +43,14 @@ projects:
       url: http://code.google.com/p/feed-buster/
 
 talks:
+    - authors: Goran Delac, Ivan Budiselic, Ivan Zuzak, Ivan Skuliber, Tomislav Stefanec
+      title: "A Methodology for SIP and SOAP Integration Using Application-Specifc Protocol Conversion"
+      date: TODO November 2012
+      place: ACM Transactions on the Web, Vol. 6, No. 4
+      url: TODO
+      download: /papers/2012_SIPSOAP.pdf
+      type: paper
+      
     - authors: Ivan Zuzak, Ivan Benc
       title: "Performance Evaluation of Hierarchical Publish-Subscribe Monitoring Architecture for Service-Oriented Applications"
       date: 21 September 2012
@@ -186,6 +194,16 @@ talks:
     {% endfor %}
   </ul>
   
+  <a name="other"></a>
+  <h1>Other stuff by me</h1>
+  <ul class="posts">
+    <li>
+      <div class="first"><span><a href="http://thisweekinrest.wordpress.com">ThisWeekInREST</a></span></div>
+      <div class="sep"> &raquo; </div>
+      <div class="second"> A periodic blog collecting news related to the <a href="http://en.wikipedia.org/wiki/Representational_State_Transfer">REST architectural style</a>. </div>
+    </li>
+  </ul>
+  
   <a name="talks"></a>
   <h1>Talks and papers</h1>
   <p class="notice">
@@ -199,15 +217,5 @@ talks:
         <div class="second"><b>({{talk.type}})</b> <a href="{{talk.url}}">{{ talk.title }}</a>, <i>{{ talk.authors }}</i>, {{ talk.place }}{% if talk.download %}, <a onClick="javascript: _gaq.push(['_trackPageview', '{{talk.download}}']);" href="{{ talk.download }}">download</a>{% endif %}{% if talk.slides %}, <a onClick="javascript: _gaq.push(['_trackPageview', '{{talk.slides}}']);" href="{{ talk.slides }}">slides</a> {% endif %}{% if talk.review %}, <a onClick="javascript: _gaq.push(['_trackPageview', '{{talk.review}}']);" href="{{ talk.review }}">peer-review comments</a> {% endif %} <a href="#talk{{forloop.rindex}}">#</a></div>
       </li>
     {% endfor %}
-  </ul>
-  
-  <a name="other"></a>
-  <h1>Other stuff by me</h1>
-  <ul class="posts">
-    <li>
-      <div class="first"><span><a href="http://thisweekinrest.wordpress.com">ThisWeekInREST</a></span></div>
-      <div class="sep"> &raquo; </div>
-      <div class="second"> A periodic blog collecting news related to the <a href="http://en.wikipedia.org/wiki/Representational_State_Transfer">REST architectural style</a>. </div>
-    </li>
   </ul>
 </div>
