@@ -6,7 +6,7 @@
 
 /* Global Reset */
 
-#post *, #related * {
+#post *, #related *, #home * {
   padding: 0;
 }
 
