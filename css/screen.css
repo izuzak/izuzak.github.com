@@ -6,7 +6,7 @@
 
 /* Global Reset */
 
-* {
+#post, #related {
   margin: 0;
   padding: 0;
 }
@@ -189,7 +189,7 @@ ul.posts {
 
   #post ul,
   #post ol {
-    margin-left: 1.35em;
+    margin-left: 2.0em;
   }
 
   #post code {
@@ -371,9 +371,6 @@ img.aligncenter {
   background-origin: padding-box;
   color: #333;
   display: block;
-  margin-bottom: 1em;
-  margin-left: 1em;
-  margin-right: 1em;
   margin-top: 40px;
   overflow-x: visible;
   overflow-y: visible;
