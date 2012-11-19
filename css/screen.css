@@ -371,6 +371,9 @@ img.aligncenter {
   background-origin: padding-box;
   color: #333;
   display: block;
+  margin-bottom: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
   margin-top: 40px;
   overflow-x: visible;
   overflow-y: visible;
