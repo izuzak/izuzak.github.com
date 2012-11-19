@@ -49,7 +49,7 @@ Want to suggest a new tool or help me write better short descriptions of the too
   * Extracts links (recursively) from a Web site and checks that no link is defined twice, that all the links are dereferenceable and warns about HTTP redirects.
 * **[Host tracker](http://www.host-tracker.com/)**
   * Website monitoring service with distributed ping/trace check, periodic monitoring, email/sms/IM notifications and statistics.
-  * Similar tools: [Down for everyone or just me](http://www.downforeveryoneorjustme.com/), [Pimgdom ping service](http://tools.pingdom.com/ping/).
+  * Similar tools: [Down for everyone or just me](http://www.downforeveryoneorjustme.com/), [Pingdom ping service](http://tools.pingdom.com/ping/).
 * **[Pingdom Full page test](http://tools.pingdom.com/fpt/)**
   * Enables users to test the load time of a page, analyze it, monitor, find bottlenecks and export results in HAR format.
   * Similar tools: [Web page test](http://www.webpagetest.org/).
