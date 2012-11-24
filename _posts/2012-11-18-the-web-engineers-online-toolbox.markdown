@@ -5,32 +5,32 @@ tags: web, engineering, software, development, testing, programming, http, toolb
 commentIssueId: 16
 ---
 
-I wanted to compile a list of online, Web-based tools that Web engineers can use for their work in development, testing, debugging and documentation. 
-The requirements for a tool to make the list are: 
+I wanted to compile a list of online, Web-based tools that Web engineers can use for their work in development, testing, debugging and documentation.
+The requirements for a tool to make the list are:
 
-* must be a live Web application (no extensions or apps you have to host yourself), 
+* must be a live Web application (no extensions or apps you have to host yourself),
 * free to use (some kind of free plan available),
-* generic applicability (not usable only for a specific application/platform), 
-* and must be useful to Web engineers (not just for Web site design). 
+* generic applicability (not usable only for a specific application/platform),
+* and must be useful to Web engineers (not just for Web site design).
 
 The current version of the list is shown below and is based on tools which I use or have used.
 Two of my personal favorites are [RequestBin](http://requestb.in/) and [Hurl](http://hurl.it) which I use regularly for almost every project.
 A few of the tools I haven't used in real projects but just played with them and thought they were really cool.
 
-Since I've probably forgotten some excellent tools, and because new tools will be made in the future - the list will be a "live list", updated as the set of available tools changes. 
+Since I've probably forgotten some excellent tools, and because new tools will be made in the future - the list will be a "live list", updated as the set of available tools changes.
 I didn't categorize the tools in the list since many tools may be used in many phases of software development.
 
 Want to suggest a new tool or help me write better short descriptions of the tools? Add a comment below or make a [pull request](https://github.com/izuzak/izuzak.github.com).
 
-**The Web engineer's online toolbox**
+**The Web engineer's online toolbox** *(last edited on November 24 2012)*
 
 * **[RequestBin](http://requestb.in/)**
   * Lets you create a URL that will collect requests made to it, then let you inspect them in a human-friendly way.
 * **[Hurl](http://hurl.it)**
   * Makes HTTP requests. Enter a URL, set some headers, view the response, then share it with others.
-  * Similar tools: [REST test test](http://resttesttest.com/), [Apigee console](https://apigee.com/console/others).
+  * Similar tools: [REST test test](http://resttesttest.com/), [Apigee console](https://apigee.com/console/others), [Web-Sniffer](http://web-sniffer.net/).
 * **[httpbin](http://httpbin.org/)**
-  * A HTTP request & response service that covers all kinds of HTTP scenarios (e.g. different HTTP verbs, status codes and redirects).  
+  * A HTTP request & response service that covers all kinds of HTTP scenarios (e.g. different HTTP verbs, status codes and redirects).
   * Similar tools: [UrlEcho](http://ivanzuzak.info/urlecho/).
 * **[REDbot](http://redbot.org/)**
   * A robot that checks HTTP resources to see how they'll behave, pointing out common problems and suggesting improvements.
@@ -38,6 +38,12 @@ Want to suggest a new tool or help me write better short descriptions of the too
 * **[WebGun](http://webgun.io/)**
   * API for creating templated webhooks.
   * Similar tools: [UrlReq](https://github.com/izuzak/urlreq).
+* **[Webscript](https://www.webscript.io/)**
+  * Webscripts are short and hosted scripts, written in Lua. They can respond to HTTP requests or run as cron jobs.
+* **[ClickHooks](http://www.clickhooks.com/)**
+  * A URL shortener service that provides callbacks via HTTP POST when people go to a shortened link.
+* **[Quilla](http://a.quil.la/)**
+  * Provides short-links where people can contact you, where each submission on your short-link will send you an email. A kind of a HTTP->SMTP proxy.
 * **[Apify](http://apify.heroku.com)**
   * Exposes datasets locked within HTML documents for which there are no APIs. APIfy extracts data from structured markups and converts it to JSON APIs.
 * **[Unicorn](http://validator.w3.org/unicorn/)**
@@ -45,16 +51,30 @@ Want to suggest a new tool or help me write better short descriptions of the too
   * Similar tools: [HTML lint](http://lint.brihten.com/html/).
 * **[Feed validator](http://validator.w3.org/feed/)**
   * W3C's validator for RSS and ATOM syndicated feeds.
+* **[JSONLint](http://jsonlint.com/)**
+  * JSON validator.
 * **[Link checker](http://validator.w3.org/checklink)**
   * Extracts links (recursively) from a Web site and checks that no link is defined twice, that all the links are dereferenceable and warns about HTTP redirects.
 * **[Host tracker](http://www.host-tracker.com/)**
   * Website monitoring service with distributed ping/trace check, periodic monitoring, email/sms/IM notifications and statistics.
-  * Similar tools: [Down for everyone or just me](http://www.downforeveryoneorjustme.com/), [Pingdom ping service](http://tools.pingdom.com/ping/).
+  * Similar tools: [Down for everyone or just me](http://www.downforeveryoneorjustme.com/), [Pingdom ping service](http://tools.pingdom.com/ping/), [IsItUp](http://isitup.org/), [Ping brigade](https://www.pingbrigade.com/).
+* **[ViewDNS](http://www.viewdns.info/)**
+  * Collection of DNS and network-level tools, such as reverse IP lookup, DNS record lookup and traceroute.
+* **[Necrohost](http://www.necrohost.com/)**
+  * List of URLs that simulate a variety of network connectivity issues e.g. slow response, unresolvable DNS and 404.
+* **[Mirrorrr](https://code.google.com/p/mirrorrr/)**
+  *  Application that mirrors the content of URLs you supply. Rewrites the fetched page to mirror all content, including images, Flash, Javascript, CSS, and even favicons.
+* **[SSL Checker](http://certlogik.com/ssl-checker/)**
+  * Test SSL certificates of online sites and helps with identifying any problems.
+* **[Loadzen](http://loadzen.com/)**
+  * Cloud-powered load testing service.
 * **[Pingdom Full page test](http://tools.pingdom.com/fpt/)**
   * Enables users to test the load time of a page, analyze it, monitor, find bottlenecks and export results in HAR format.
   * Similar tools: [Web page test](http://www.webpagetest.org/).
+* **[Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights)**
+  * Analyzes the content of a web page, then generates suggestions to make that page faster.
 * **[HAR viewer](http://www.softwareishard.com/har/viewer/)**
-  * Visualizes HTTP Archive (HAR) log files created by HTTP tracking tools. 
+  * Visualizes HTTP Archive (HAR) log files created by HTTP tracking tools.
 * **[CORS proxy](http://www.corsproxy.com/)**
   * Allows JavaScript code on your site to access resources on other domains that would normally be blocked due to the same-origin policy.
 * **[Browserling](https://browserling.com/)**
@@ -63,8 +83,13 @@ Want to suggest a new tool or help me write better short descriptions of the too
   * Test a WebSocket connection from your browser against our WebSocket echo server.
 * **[YQL](http://developer.yahoo.com/yql/)**
   * An expressive SQL-like language that lets you query, filter, and join data across Web services
+* **[Webshell](http://webshell.io/)**
+  * An API which allow accessing any data on the programmable Web using APIs.
 * **[Yahoo Pipes](http://pipes.yahoo.com/pipes/)**
   * A graphical user interface for building data mashups that aggregate web feeds, web pages, and other services.
 * **[Apiary](http://apiary.io/)**
   * Language and tool for generating REST API documentation with an interactive inspector.
   * Similar tools: [Swagger](http://swagger.wordnik.com/).
+* **[JSFiddle](http://jsfiddle.net/)**
+  * A playground for Web site developers: code editor and repository for snippets built from HTML, CSS and JavaScript.
+  * Similat tools: [JSBin](http://jsbin.com/)
