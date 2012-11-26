@@ -42,6 +42,8 @@ Want to suggest a new tool or help me write better short descriptions of the too
   * Webscripts are short and hosted scripts, written in Lua. They can respond to HTTP requests or run as cron jobs.
 * **[ClickHooks](http://www.clickhooks.com/)**
   * A URL shortener service that provides callbacks via HTTP POST when people go to a shortened link.
+* **[MailHooks](http://mailhooks2.appspot.com/)**
+  * Lets you receive emails via HTTP POST (aka webhooks). You can create many hooks that will give you an e-mail address that, when e-mailed, parses and POSTs the message to the URL you specify.
 * **[Quilla](http://a.quil.la/)**
   * Provides short-links where people can contact you, where each submission on your short-link will send you an email. A kind of a HTTP->SMTP proxy.
 * **[Apify](http://apify.heroku.com)**
