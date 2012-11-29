@@ -22,7 +22,7 @@ I didn't categorize the tools in the list since many tools may be used in many p
 
 Want to suggest a new tool or help me write better short descriptions of the tools? Add a comment below or make a [pull request](https://github.com/izuzak/izuzak.github.com).
 
-**The Web engineer's online toolbox** *(last edited on November 24 2012)*
+**The Web engineer's online toolbox** *(last edited on November 29 2012)*
 
 * **[RequestBin](http://requestb.in/)**
   * Lets you create a URL that will collect requests made to it, then let you inspect them in a human-friendly way.
@@ -68,6 +68,8 @@ Want to suggest a new tool or help me write better short descriptions of the too
   *  Application that mirrors the content of URLs you supply. Rewrites the fetched page to mirror all content, including images, Flash, Javascript, CSS, and even favicons.
 * **[SSL Checker](http://certlogik.com/ssl-checker/)**
   * Test SSL certificates of online sites and helps with identifying any problems.
+* **[CSR/Cert decoder](http://certlogik.com/decoder/)**
+  * Decode and check your CSRs and SSL certificates.
 * **[Loadzen](http://loadzen.com/)**
   * Cloud-powered load testing service.
 * **[Pingdom Full page test](http://tools.pingdom.com/fpt/)**
