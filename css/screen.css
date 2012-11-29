@@ -50,6 +50,10 @@ table {
   font: 100%;
 }
 
+.hidden {
+  visibility: hidden;
+}
+
 /*****************************************************************************/
 /*
 /* Home
@@ -64,7 +68,7 @@ ul.posts {
   ul.posts li {
     line-height: 1.75em;
   }
-  
+
   ul.posts li div {
     vertical-align: top;
   }
@@ -74,17 +78,17 @@ ul.posts {
     font-family: Monaco, "Courier New", monospace;
     font-size: 80%;
   }
-  
+
   ul.posts li .first {
     width: 8.5em;
     display: inline-block;
   }
-  
+
   ul.posts li .sep {
     width: 1em;
     display: inline-block;
   }
-  
+
   ul.posts li .second {
     width: 40.0em;
     display: inline-block;
@@ -222,7 +226,7 @@ ul.posts {
   #related h2 {
     margin-bottom: 1em;
   }
-  
+
 img.aligncenter {
    display: block;
    margin-left: auto;
@@ -248,7 +252,7 @@ img.aligncenter {
     padding: 0px;
     width: 100%;
   }
-  
+
 .comment .commentheader {
   border-bottom-color: #CACACA;
   border-bottom-style: solid;
@@ -275,7 +279,7 @@ img.aligncenter {
   white-space: nowrap;
   width: 100%;
 }
-  
+
 .comment .commentheader .commentgravatar {
   background-attachment: scroll;
   background-clip: border-box;
@@ -307,7 +311,7 @@ img.aligncenter {
   white-space: nowrap;
   width: 20px;
 }
-  
+
 .comment .commentheader a:link {
   text-decoration: none;
 }
@@ -315,8 +319,8 @@ img.aligncenter {
 .comment .commentheader a:hover {
   border-bottom:1px solid;
 }
-  
-  
+
+
 .comment .commentheader .commentuser {
   background-color: transparent;
   color: black;
@@ -339,7 +343,7 @@ img.aligncenter {
   white-space: nowrap;
   width: 0px;
 }
-  
+
 .comment .commentheader .commentdate {
   background-color: transparent;
   color: #777;
@@ -361,7 +365,7 @@ img.aligncenter {
   white-space: nowrap;
   width: 20em;
 }
-  
+
 .comment .commentbody {
   background-attachment: scroll;
   background-clip: border-box;
@@ -381,7 +385,7 @@ img.aligncenter {
   width: 96%;
   word-wrap: break-word;
 }
-  
+
 .comment .commentbody p {
   margin-bottom: 0.5em;
   margin-top: 0.5em;
