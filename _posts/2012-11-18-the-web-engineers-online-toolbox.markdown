@@ -22,7 +22,7 @@ I didn't categorize the tools in the list since many tools may be used in many p
 
 Want to suggest a new tool or help me write better short descriptions of the tools? Add a comment below or make a [pull request](https://github.com/izuzak/izuzak.github.com).
 
-**The Web engineer's online toolbox** *(last edited on November 30 2012)*
+**The Web engineer's online toolbox** *(last edited on December 12 2012)*
 
 * **[RequestBin](http://requestb.in/)**
   * Lets you create a URL that will collect requests made to it, then let you inspect them in a human-friendly way.
@@ -86,7 +86,7 @@ Want to suggest a new tool or help me write better short descriptions of the too
 * **[WebSocket Echo Test](http://www.websocket.org/echo.html)**
   * Test a WebSocket connection from your browser against our WebSocket echo server.
 * **[YQL](http://developer.yahoo.com/yql/)**
-  * An expressive SQL-like language that lets you query, filter, and join data across Web services
+  * An expressive SQL-like language that lets you query, filter, and join data across Web services.
 * **[Webshell](http://webshell.io/)**
   * An API which allow accessing any data on the programmable Web using APIs.
 * **[Yahoo Pipes](http://pipes.yahoo.com/pipes/)**
@@ -97,3 +97,5 @@ Want to suggest a new tool or help me write better short descriptions of the too
 * **[JSFiddle](http://jsfiddle.net/)**
   * A playground for Web site developers: code editor and repository for snippets built from HTML, CSS and JavaScript.
   * Similat tools: [JSBin](http://jsbin.com/)
+* **[Google Feed API](https://developers.google.com/feed/v1/jsondevguide)
+  * Enables looking up feed URLs for a site ([example](http://ajax.googleapis.com/ajax/services/feed/lookup?v=1.0&q=http://ivanzuzak.info/)), searching for feeds by keywords ([example](https://ajax.googleapis.com/ajax/services/feed/find?v=1.0&q=ivan%20zuzak)) and returning a JSON representation of a feed ([example](https://ajax.googleapis.com/ajax/services/feed/load?v=1.0&q=http://ivanzuzak.info/atom.xml))
