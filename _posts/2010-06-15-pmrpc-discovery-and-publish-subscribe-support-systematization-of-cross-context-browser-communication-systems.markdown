@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Pmrpc discovery and publish-subscribe support + systematization of cross-context browser communication systems
+description: Pmrpc discovery and publish-subscribe support + systematization of cross-context browser communication systems
 commentIssueId: 10
 ---
 

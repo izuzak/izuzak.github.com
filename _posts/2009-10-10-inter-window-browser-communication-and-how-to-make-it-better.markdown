@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Inter-window browser communication and how to make it better
+description: Inter-window browser communication and how to make it better
 commentIssueId: 5
 ---
 
@@ -35,7 +36,7 @@ pmrpc.register( {
   publicProcedureName : "HelloPMRPC",
   procedure : function(printParam) { alert(printParam); } } );
 {% endhighlight %}
- 
+
 <p style="padding-left:30px;">2. Second, the procedure is called from a remote window or iFrame by specifying the window object which contains the remote procedure, name of the procedure and parameters:</p>
 
 {% highlight javascript linenos %}
@@ -45,9 +46,9 @@ pmrpc.call( {
   publicProcedureName : "HelloPMRPC",
   params : ["Hello World!"] } );
 {% endhighlight %}
- 
+
 Furthermore, pmrpc also provides several <strong>features for advanced communication</strong>: <strong>callbacks</strong> for successful and unsuccessful calls, <strong>access control lists</strong> on both the client and server side, <strong>fault tolerance</strong> using user-defined retries and timeouts for each call, registering <strong> asynchronous procedures</strong>. The features and their usage are explained in detail on the <a target="_blank" href="http://code.google.com/p/pmrpc/wiki/PmrpcApiDocs">pmrpc API docs page</a> and a <a target="_blank" href="http://docs.google.com/present/view?id=dctznkrh_677n8758gf8">short presentation</a>, so I'll just give an <strong>example of an advanced pmrpc call</strong>:
- 
+
 <p style="padding-left:30px;">1. First, a synchronous procedure named "HelloPMRPC" accessible from windows and iframes loaded from any page on "http://www.myFriendlyDomain1.com" or exactly from the "http://www.myFriendlyDomain2.com" page is registered:</p>
 
 {% highlight javascript linenos %}
@@ -65,7 +66,7 @@ pmrpc.register( {
   "acl" : accessControlList
 } );
 {% endhighlight %}
- 
+
 <p style="padding-left:30px;">2. Second, the procedure "HelloPMRPC" is called with a single positional parameter "Hello world from pmrpc client!". In case of success, the return value will be alerted while in case of errors the error description will be alerted. The call will be retried up to 15 times, waiting 1500 milliseconds between retries. Windows or iFrames loaded from any domain, except from http://evil.com, may process the call:</p>
 
 {% highlight javascript linenos %}
@@ -82,14 +83,14 @@ var parameters = {
 
 pmrpc.call(parameters);
 {% endhighlight %}
- 
+
 Pmrpc is an <strong>open-source project</strong> developed by <a target="_blank" href="http://mivankovic.blogspot.com/2009/10/pmrpc.html">Marko Ivankovic</a> and <a target="_blank" href="http://www.google.com/profiles/izuzak">myself</a> and is available under the <strong>Apache v2.0 license</strong>. The library works in <strong>all web browsers</strong> that implement the postMessage API (Firefox 3, Google Chrome, Internet Explorer 8). For more information please visit the <a target="_blank" href="http://code.google.com/p/pmrpc"><strong>project homepage on Google Code</strong></a> and the <a target="_blank" href="http://code.google.com/p/pmrpc/wiki/PmrpcApiDocs"><strong>API docs page</strong></a> for a full description of the API, feature list and usage examples.
 
 I'll end this post with a few <strong>ideas on making pmrpc even better</strong>:
 
-1.  <strong>discovery</strong> - currently, in order to call a remote procedure one needs to have a reference to a window that exposes that procedure. Sometimes obtaining a reference to a window is not very practical and easy (or possible) and a way to find windows by various criteria is needed. For example, discover all windows with a specific name or location or discover windows that expose a procedure with a specific name.  
+1.  <strong>discovery</strong> - currently, in order to call a remote procedure one needs to have a reference to a window that exposes that procedure. Sometimes obtaining a reference to a window is not very practical and easy (or possible) and a way to find windows by various criteria is needed. For example, discover all windows with a specific name or location or discover windows that expose a procedure with a specific name.
 
-2. <strong>web workers</strong> - <a target="_blank" href="http://www.whatwg.org/specs/web-workers/current-work/">web workers</a> are another specification being developed in parallel with HTML5. The specification "defines an API for running scripts in the background independently of any user interface scripts". What's interesting is that the postMessage API is used to communicate with web workers and therefor pmrpc could be extended to include support for web workers.  
+2. <strong>web workers</strong> - <a target="_blank" href="http://www.whatwg.org/specs/web-workers/current-work/">web workers</a> are another specification being developed in parallel with HTML5. The specification "defines an API for running scripts in the background independently of any user interface scripts". What's interesting is that the postMessage API is used to communicate with web workers and therefor pmrpc could be extended to include support for web workers.
 
 3. <strong>publish-subscribe mechanism</strong> - there are lots of communication models other than remote procedure call. One of the most popular models is <a target="_blank" href="http://en.wikipedia.org/wiki/Publish/subscribe">publish-subscribe</a> in which publishers publish events on channels and subscribers subscribe for events on these channels. Messages are delivered from publishers to subscribers without having a direct reference to each other.
 

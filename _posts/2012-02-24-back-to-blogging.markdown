@@ -1,11 +1,12 @@
 ---
 layout: post
 title: Back to blogging
+description: Back to blogging
 tags: blog, blogging
 commentIssueId: 13
 ---
 
-Forgive me, InterWebs, for it has been a year since my [last blog post](http://ivanzuzak.info/2011/02/18/github-hosted-comments-for-github-hosted-blogs.html). 
+Forgive me, InterWebs, for it has been a year since my [last blog post](http://ivanzuzak.info/2011/02/18/github-hosted-comments-for-github-hosted-blogs.html).
 2011 was a very busy+wonderful year for me, and I've had the opportunity to meet many nice people, visit many cool places and work on many interesting projects.
 
 * I gave [a talk](http://ivanzuzak.info/#talks) at the [Knowledge Media Institute](http://kmi.open.ac.uk/) of the [Open University, UK](http://en.wikipedia.org/wiki/Open_University) about inter-widget communication based on [the work](http://arxiv.org/abs/1108.4770) that [Marko](https://plus.google.com/105493585317824062514/) and I did in this field.

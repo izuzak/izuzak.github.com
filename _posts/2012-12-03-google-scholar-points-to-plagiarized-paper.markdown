@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "Google Scholar pointed me to a plagiarism of my paper"
+title: Google Scholar pointed me to a plagiarism of my paper
+description: Google Scholar pointed me to a plagiarism of my paper
 tags: academia, research, education, plagiarism, corruption, google scholar, recommendation, search
 commentIssueId: 18
 ---

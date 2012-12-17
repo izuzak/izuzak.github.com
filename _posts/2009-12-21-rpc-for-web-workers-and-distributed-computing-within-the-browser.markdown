@@ -1,6 +1,7 @@
 ---
 layout: post
 title: RPC for Web Workers and distributed computing within the browser
+description: RPC for Web Workers and distributed computing within the browser
 commentIssueId: 7
 ---
 

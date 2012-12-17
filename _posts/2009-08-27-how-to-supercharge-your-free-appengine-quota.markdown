@@ -1,6 +1,7 @@
 ---
 layout: post
 title: How to supercharge your free AppEngine quota?
+description: Named arguments in JavaScript
 commentIssueId: 3
 ---
 

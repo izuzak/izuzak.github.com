@@ -1,6 +1,7 @@
 ---
 layout: post
 title: A better future for the FriendFeed tools and services ecosystem
+description: A better future for the FriendFeed tools and services ecosystem
 commentIssueId: 4
 ---
 

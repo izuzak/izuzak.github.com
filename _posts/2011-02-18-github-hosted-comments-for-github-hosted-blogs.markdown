@@ -1,21 +1,22 @@
 ---
 layout: post
 title: GitHub hosted comments for GitHub hosted blogs
+description: GitHub hosted comments for GitHub hosted blogs
 tags: github, blog, comments, hosting
 commentIssueId: 12
 ---
 
 *__EDIT (January 25 2011): A while back, the GitHub team has updated the GitHub API to v3 which is now even more cool. Since the [new API](http://developer.github.com/v3/) supports fetching both the Markdown source and the HTML rendering of a comment, this eliminates the need for rendering the comments on the client-side using the Showdown library as it was done before. I've updated the blog post to reflect this and some other minor API changes.__*
 
-Recently [switching](http://ivanzuzak.info/2011/01/02/enabling-pubsubhubbub-for-github-hosted-blogs.html) from a Wordpress.com-hosted blog to a GitHub hosted blog made me curious if blog comments could also be somehow hosted on GitHub. Why host comments on GitHub? Other than it being cool, open and hackable, it would enable that *all* content for the blog be hosted on GitHub. 
+Recently [switching](http://ivanzuzak.info/2011/01/02/enabling-pubsubhubbub-for-github-hosted-blogs.html) from a Wordpress.com-hosted blog to a GitHub hosted blog made me curious if blog comments could also be somehow hosted on GitHub. Why host comments on GitHub? Other than it being cool, open and hackable, it would enable that *all* content for the blog be hosted on GitHub.
 
 So, here's what I wanted from the future commenting system:
 
 * must be hosted completely on GitHub.
-* must be tied to the GitHub repository which hosts the blog. 
-* must provide user login, tie each comment with the user who made the comment, and give both blog owners and users control over their comments. 
+* must be tied to the GitHub repository which hosts the blog.
+* must provide user login, tie each comment with the user who made the comment, and give both blog owners and users control over their comments.
 * must be possible to pull the comments for a post from the system and show them on the post's Web page.
-* should be easy to set-up by the blog owner and easy to use by blog readers. 
+* should be easy to set-up by the blog owner and easy to use by blog readers.
 
 These requirements ruled out using [Gists](https://gist.github.com), asking users to fork the repository and submit pull-request to a special comments file (heh, this was actually the first thing that I thought of) or using any external service for comment creation and/or hosting.
 
@@ -23,7 +24,7 @@ The solution I came up with is to use the [GitHub issue tracker](https://github.
 
 <img class="aligncenter" title="GitHub hosted comments for GitHub hosted blogs" src="http://ivanzuzak.info/images/github_issues.png" alt="" width="90%" />
 
-First, for each blog post you plan to publish, create an issue in your blog's GitHub repository issue tracker. For example, here's [the issue for this blog posts](https://github.com/izuzak/izuzak.github.com/issues/12). Notice that all issues have a common base URL (``https://github.com/izuzak/izuzak.github.com/issues/`` in my example) and a unique id (``12`` in my example). Readers of your blog will use the issue tracker if they want to leave a comment. 
+First, for each blog post you plan to publish, create an issue in your blog's GitHub repository issue tracker. For example, here's [the issue for this blog posts](https://github.com/izuzak/izuzak.github.com/issues/12). Notice that all issues have a common base URL (``https://github.com/izuzak/izuzak.github.com/issues/`` in my example) and a unique id (``12`` in my example). Readers of your blog will use the issue tracker if they want to leave a comment.
 
 Second, add a link to each of your blog posts pointing to the Web page of the issue you created for comments. Since, you're probably using [Jekyll](https://github.com/mojombo/jekyll) to generate your blog, a simple way of doing this is to add the above mentioned id of the issue to the [YAML front matter](https://github.com/mojombo/jekyll/wiki/YAML-Front-Matter) block of each blog post and then add a [Liquid template](https://github.com/mojombo/jekyll/wiki/Liquid-Extensions) in your [layout file](https://github.com/mojombo/jekyll/wiki/Usage) to retrieve the id and generate the full issue URL. For example, here's the YAML front matter for the blog post your reading (``commentIssueId`` is the id of the post's issue in the repository Issue tracker):
 
@@ -55,7 +56,7 @@ Third, add a JavaScript script to each blog posts which pulls the post's comment
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 
 <script type="text/javascript">
-  function loadComments(data) {  
+  function loadComments(data) {
    // ...
   }
 
@@ -79,7 +80,7 @@ Fourth, insert the pulled comment data into the blog post's HTML <del>and render
 
 <script type="text/javascript">
 
-  function loadComments(data) {  
+  function loadComments(data) {
     for (var i=0; i<data.length; i++) {
       var cuser = data[i].user.login;
       var cuserlink = "https://www.github.com/" + data[i].user.login;
@@ -87,7 +88,7 @@ Fourth, insert the pulled comment data into the blog post's HTML <del>and render
       var cbody = data[i].body_html;
       var cavatarlink = data[i].user.avatar_url;
       var cdate = Date.parse(data[i].created_at).toString("yyyy-MM-dd HH:mm:ss");
-      
+
       $("#comments").append("<div class='comment'><div class='commentheader'><div class='commentgravatar'>" + '<img src="' + cavatarlink + '" alt="" width="20" height="20">' + "</div><a class='commentuser' href=\""+ cuserlink + "\">" + cuser + "</a><a class='commentdate' href=\"" + clink + "\">" + cdate + "</a></div><div class='commentbody'>" + cbody + "</div></div>");
     }
   }

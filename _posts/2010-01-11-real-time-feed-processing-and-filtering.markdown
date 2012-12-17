@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Real-time feed processing and filtering
+description: Real-time feed processing and filtering
 commentIssueId: 8
 ---
 

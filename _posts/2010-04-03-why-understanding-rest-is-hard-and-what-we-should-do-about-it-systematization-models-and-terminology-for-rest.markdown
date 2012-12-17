@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Why understanding REST is hard and what we should do about it - systematization, models and terminology for REST
+description: Why understanding REST is hard and what we should do about it - systematization, models and terminology for REST
 commentIssueId: 9
 ---
 <em><strong>EDIT 29 August 2011: I've published a paper on the FSM-based formalism for describing RESTful systems at the <a href="http://icwe2011.webengineering.org/">ICWE 2011 conference</a>. The formalism presented in the paper is a more detailed and advanced version of the one presented in the second part of this blog post. Links for downloading the paper and presentation slides are in the <a href="http://ivanzuzak.info/#talks">talks and papers section</a>.</strong></em>

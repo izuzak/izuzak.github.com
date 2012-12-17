@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Enabling PubSubHubBub for GitHub hosted blogs
+description: Enabling PubSubHubBub for GitHub hosted blogs
 tags: github, pubsubhubbub, feed, atom, webhooks, appengine
 commentIssueId: 11
 ---
@@ -13,7 +14,7 @@ Second, the reference PubSubHubBub hub at http://pubsubhubbub.appspot.com doesn'
 
 The result of these two discoveries is that you no longer need to use a proxy server to ping a PSHB hub using GitHub post-commit hooks, as described in the blog post below. You can just use a direct Web Hook to the reference hub. For example, I would specify this URL as the Web Hook to ping the hub when my blog's ATOM feed is updated: ```http://pubsubhubbub.appspot.com/publish?hub.mode=publish&hub.url=http%3A%2F%2Fivanzuzak.info%2Fatom.xml```. Just replace the value of the hub.url parameter with your blog's ATOM/RSS feed URL and that's it!
 
-However, again, notice that this works only because the reference PSHB hub is not strictly following the PSHB specification. If you are using another PSHB hub, check that it can accept parameters passed in the URL query part. 
+However, again, notice that this works only because the reference PSHB hub is not strictly following the PSHB specification. If you are using another PSHB hub, check that it can accept parameters passed in the URL query part.
 
 Great work, Sergey!!
 

@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "Forgotten TODOs: ideas for contributing to open-source projects"
+title: Forgotten TODOs: ideas for contributing to open-source projects
+description: Forgotten TODOs: ideas for contributing to open-source projects
 tags: open-source, ideas, programming, grep
 commentIssueId: 14
 ---
 
-*__EDIT (March 08 2012)__:* This post got a lot of feedback on [Hacker News](http://news.ycombinator.com/item?id=3660137) and [Reddit](http://www.reddit.com/r/programming/comments/qg3nz/ideas_for_contributing_to_opensource_projects/). 
+*__EDIT (March 08 2012)__:* This post got a lot of feedback on [Hacker News](http://news.ycombinator.com/item?id=3660137) and [Reddit](http://www.reddit.com/r/programming/comments/qg3nz/ideas_for_contributing_to_opensource_projects/).
 I'd like to thank all the people on their positive and constructive thoughts and address some of the feedback.
 
 First, there was some really good advice on advanced usage of TODOs, such as using tools for tracking them systematically and using different TODO tags (such as TODO, FIXME, TBD, and XXX) to indicate the relevance/urgency of the TODO.
@@ -29,7 +30,7 @@ git clone repository_url_of_some_open_source_project target_directory
 grep -RIn TODO target_directory/*
 {% endhighlight %}
 
-So, __find the URL of the repository project you want to contribute to, checkout the repository using git/mercurial/svn and then find all the TODOs in the source code using grep__. 
+So, __find the URL of the repository project you want to contribute to, checkout the repository using git/mercurial/svn and then find all the TODOs in the source code using grep__.
 The `-RIn` flags will tell grep to do a recursive search (-R), skip binary files (-I) and include line numbers (-n) for results.
 And that's it!
 Go through the results and pick whatever you find interesting and within your skill range.

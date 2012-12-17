@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "The Web engineer's online toolbox"
+title: The Web engineer's online toolbox
+description: The Web engineer's online toolbox
 tags: web, engineering, software, development, testing, programming, http, toolbox, tools, online
 commentIssueId: 16
 ---
@@ -11,7 +12,7 @@ The requirements for a tool to make the list are:
 * must be a live Web application (no extensions or apps you have to host yourself),
 * free to use (some kind of free plan available),
 * generic applicability (not usable only for a specific application/platform),
-* and must be useful to Web engineers (not just for Web site design).
+* and must be useful to Web engineers (not just for Web site design)
 
 The current version of the list is shown below and is based on tools which I use or have used.
 Two of my personal favorites are [RequestBin](http://requestb.in/) and [Hurl](http://hurl.it) which I use regularly for almost every project.

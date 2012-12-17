@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Named arguments in JavaScript
+description: Named arguments in JavaScript
 commentIssueId: 2
 ---
 
@@ -30,8 +31,8 @@ What I came up with (code presented below) is based on the following:
 	<li>from a dictionary of named arguments, it is possible to construct an array of arguments in the correct order using the parsed representation</li>
 	<li>using the <em>apply </em>method of the Function prototype, it is possible to dynamically call a function, passing an array of arguments instead of an argument list.</li>
 </ol>
-  
-  
+
+
 {% highlight javascript linenos %}
 // calls function fn with context self and parameters defined in dictionary
 // namedParams

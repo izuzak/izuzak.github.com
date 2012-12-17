@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Extending and customizing Google Code project hosting
+description: Extending and customizing Google Code project hosting
 commentIssueId: 6
 ---
 
@@ -25,7 +26,7 @@ The first idea for extending project sites is to <strong>embed 3-rd party conten
 <table>
 <tr>
 <td>
-<p><a href="http://code.google.com/p/pubsubhubbub"><img class="aligncenter" title="Example 1" src="/images/blog_pres1.png" alt="Example 1" width="90%" /></a></p> 
+<p><a href="http://code.google.com/p/pubsubhubbub"><img class="aligncenter" title="Example 1" src="/images/blog_pres1.png" alt="Example 1" width="90%" /></a></p>
 </td>
 <td>
 <p><a href="http://code.google.com/p/feed-buster"><img class="aligncenter" title="Example 2" src="/images/blog_ff1.png" alt="Example 2" width="90%"  /></a></p>
