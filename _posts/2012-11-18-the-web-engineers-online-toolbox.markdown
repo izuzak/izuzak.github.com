@@ -23,7 +23,7 @@ I didn't categorize the tools in the list since many tools may be used in many p
 
 Want to suggest a new tool or help me write better short descriptions of the tools? Add a comment below or make a [pull request](https://github.com/izuzak/izuzak.github.com).
 
-**The Web engineer's online toolbox** *(last edited on December 12 2012)*
+**The Web engineer's online toolbox** *(last edited on January 06 2013)*
 
 * **[RequestBin](http://requestb.in/)**
   * Lets you create a URL that will collect requests made to it, then let you inspect them in a human-friendly way.
@@ -52,6 +52,8 @@ Want to suggest a new tool or help me write better short descriptions of the too
 * **[Unicorn](http://validator.w3.org/unicorn/)**
   * W3C's unified validator, which performs a variety of checks from the popular HTML and CSS validators, as well as other useful services.
   * Similar tools: [HTML lint](http://lint.brihten.com/html/).
+* **[HTML tidy](http://infohound.net/tidy/)**
+  * HTML Tidy is a tool for checking and cleaning up HTML source files.
 * **[Feed validator](http://validator.w3.org/feed/)**
   * W3C's validator for RSS and ATOM syndicated feeds.
 * **[JSONLint](http://jsonlint.com/)**
@@ -71,6 +73,8 @@ Want to suggest a new tool or help me write better short descriptions of the too
   * Test SSL certificates of online sites and helps with identifying any problems.
 * **[CSR/Cert decoder](http://certlogik.com/decoder/)**
   * Decode and check your CSRs and SSL certificates.
+* **[SSL Server Test](https://www.ssllabs.com/ssltest/index.html)**
+  * Performs a deep analysis of the configuration of any SSL web server on the public Internet.
 * **[Loadzen](http://loadzen.com/)**
   * Cloud-powered load testing service.
 * **[Pingdom Full page test](http://tools.pingdom.com/fpt/)**
@@ -80,6 +84,8 @@ Want to suggest a new tool or help me write better short descriptions of the too
   * Analyzes the content of a web page, then generates suggestions to make that page faster.
 * **[HAR viewer](http://www.softwareishard.com/har/viewer/)**
   * Visualizes HTTP Archive (HAR) log files created by HTTP tracking tools.
+* **[PCAP Web Performance Analyzer](http://pcapperf.appspot.com/)**
+  * Converts a PCAP file to HAR, provides a HTTP waterfall view using HarViewer and Page Speed suggestions for your network trace.
 * **[CORS proxy](http://www.corsproxy.com/)**
   * Allows JavaScript code on your site to access resources on other domains that would normally be blocked due to the same-origin policy.
 * **[Browserling](https://browserling.com/)**
@@ -97,6 +103,9 @@ Want to suggest a new tool or help me write better short descriptions of the too
   * Similar tools: [Swagger](http://swagger.wordnik.com/).
 * **[JSFiddle](http://jsfiddle.net/)**
   * A playground for Web site developers: code editor and repository for snippets built from HTML, CSS and JavaScript.
-  * Similat tools: [JSBin](http://jsbin.com/)
-* **[Google Feed API](https://developers.google.com/feed/v1/jsondevguide)
-  * Enables looking up feed URLs for a site ([example](http://ajax.googleapis.com/ajax/services/feed/lookup?v=1.0&q=http://ivanzuzak.info/)), searching for feeds by keywords ([example](https://ajax.googleapis.com/ajax/services/feed/find?v=1.0&q=ivan%20zuzak)) and returning a JSON representation of a feed ([example](https://ajax.googleapis.com/ajax/services/feed/load?v=1.0&q=http://ivanzuzak.info/atom.xml))
+  * Similar tools: [JSBin](http://jsbin.com/)
+* **[Google Feed API](https://developers.google.com/feed/v1/jsondevguide)**
+  * Enables looking up feed URLs for a site ([example](http://ajax.googleapis.com/ajax/services/feed/lookup?v=1.0&q=http://ivanzuzak.info/)), searching for feeds by keywords ([example](https://ajax.googleapis.com/ajax/services/feed/find?v=1.0&q=ivan%20zuzak)) and returning a JSON representation of a feed ([example](https://ajax.googleapis.com/ajax/services/feed/load?v=1.0&q=http://ivanzuzak.info/atom.xml)).
+* **[About My Browser](https://aboutmybrowser.com/?nr)**
+  * Extracts and displays browser info (browser, version, OS, cookies, JS, screen resolution, etc) and stores this info as a shareable Web page.
+  * Similar tools: [http://browserspy.dk/](http://browserspy.dk/), [SupportDetails](http://supportdetails.com/)
