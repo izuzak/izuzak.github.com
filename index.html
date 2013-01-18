@@ -162,18 +162,13 @@ talks:
     <li>
       <div class="first"><span>Ivan Zuzak</span></div>
       <div class="sep"> &raquo; </div>
-      <div class="second">See my <a href="#blog">blog posts</a>, <a href="#projects">open source projects</a>, <a href="#talks">talks and papers</a> and <a href="#other">other stuff by me</a> below.</div>
-    </li>
-    <li>
-      <div class="first"><span>Ivan Zuzak</span></div>
-      <div class="sep"> &raquo; </div>
-      <div class="second">Find and contact me via <a href="mailto:izuzak@gmail.com">e-mail</a>, <a href="http://www.twitter.com/izuzak">Twitter</a>, <a href="https://plus.google.com/117110094515372104918/about">Google+</a>, <a href="http://hr.linkedin.com/in/izuzak/">LinkedIn</a>, <a href="http://www.github.com/izuzak">GitHub</a> and <a href="xmpp:izuzak@gmail.com">XMPP for chat</a> (<img height="14" width="16" style="padding:0 2px 0 0;margin:0;border:none" src="http://www.google.com/talk/service/resources/chaticon.gif" alt=""><img height="9" width="9" style="padding:0 2px 0 0;margin:0;border:none" src="http://www.google.com/talk/service/badge/Show?tk=z01q6amlqm8em0g9uvqpca7oereptv1u0rqpfetire02mg2uch3bdv6ubb15ipbrobgt8lj648gkuk8ok35i9kqo9rkdfdku4pkanf51v6i9beghqn67cbnqg3lnbs35ubjledkpoke383mln6t2ffifo4cp2erglbb319uh1&amp;w=9&amp;h=9" alt=""><a href="http://www.google.com/talk/service/badge/Start?tk=z01q6amlqm8em0g9uvqpca7oereptv1u0rqpfetire02mg2uch3bdv6ubb15ipbrobgt8lj648gkuk8ok35i9kqo9rkdfdku4pkanf51v6i9beghqn67cbnqg3lnbs35ubjledkpoke383mln6t2ffifo4cp2erglbb319uh1" target="_blank" title="Click here to chat with me">click here to chat with me</a>) .</div>
+      <div class="second">Contact me via <a href="mailto:izuzak@gmail.com">e-mail</a>, <a href="http://www.twitter.com/izuzak">Twitter</a>, <a href="https://plus.google.com/117110094515372104918/about">Google+</a>, <a href="http://hr.linkedin.com/in/izuzak/">LinkedIn</a>, <a href="http://www.github.com/izuzak">GitHub</a> or just <img height="9" width="9" style="padding:0 2px 0 0;margin:0;border:none" src="http://www.google.com/talk/service/badge/Show?tk=z01q6amlqm8em0g9uvqpca7oereptv1u0rqpfetire02mg2uch3bdv6ubb15ipbrobgt8lj648gkuk8ok35i9kqo9rkdfdku4pkanf51v6i9beghqn67cbnqg3lnbs35ubjledkpoke383mln6t2ffifo4cp2erglbb319uh1&amp;w=9&amp;h=9" alt=""><a href="http://www.google.com/talk/service/badge/Start?tk=z01q6amlqm8em0g9uvqpca7oereptv1u0rqpfetire02mg2uch3bdv6ubb15ipbrobgt8lj648gkuk8ok35i9kqo9rkdfdku4pkanf51v6i9beghqn67cbnqg3lnbs35ubjledkpoke383mln6t2ffifo4cp2erglbb319uh1" target="_blank" title="Click here to chat with me">click here to chat with me</a>.</div>
     </li>
   </ul>
 
   <a name="blog"></a>
-  <h1>Blog Posts</h1>
-  <ul class="posts">
+  <h1>Blog Posts <a href="#" class="blogtoggle">(show all blog posts)</a></h1>
+  <ul class="posts blog">
     {% for post in site.posts %}
       <li>
         <div class="first"><span>{{ post.date | date_to_string }}</span></div>
@@ -184,8 +179,8 @@ talks:
   </ul>
 
   <a name="projects"></a>
-  <h1>Open Source Projects</h1>
-  <ul class="posts">
+  <h1>Open Source Projects <a href="#" class="projectstoggle">(to show all projects)</a></h1>
+  <ul class="posts projects">
     {% for project in page.projects %}
       <li>
         <div class="first"><span><a href="{{project.url}}">{{ project.name }}</a></span></div>
@@ -206,11 +201,8 @@ talks:
   </ul>
 
   <a name="talks"></a>
-  <h1>Talks and papers</h1>
-  <p class="notice">
-    Please note: Other organizations, such as the IEEE, hold the copyrights on some of these works. This material is given for personal use only and to enable timely dissemination of scholarly and technical work. Copyright and all rights therein are retained by authors or by other copyright holders. All persons copying this information are expected to adhere to the terms and constraints invoked by each author's copyright. In most cases, these works may not be reposted without the explicit permission of the copyright holder.
-  </p>
-  <ul class="posts">
+  <h1>Talks and papers <a href="#" class="talkstoggle">(to show all talks and papers)</a></h1>
+  <ul class="posts talks">
     {% for talk in page.talks %}
       <li id="talk{{forloop.rindex}}">
         <div class="first"><span>{{ talk.date }}</span></div>
@@ -219,4 +211,27 @@ talks:
       </li>
     {% endfor %}
   </ul>
+  <p class="notice">
+    Please note: Other organizations, such as the IEEE, hold the copyrights on some of these works. This material is given for personal use only and to enable timely dissemination of scholarly and technical work. Copyright and all rights therein are retained by authors or by other copyright holders. All persons copying this information are expected to adhere to the terms and constraints invoked by each author's copyright. In most cases, these works may not be reposted without the explicit permission of the copyright holder.
+  </p>
 </div>
+
+<script type="text/javascript">
+  function toggleRecentPosts(selector) {
+    var children = $(selector).children();
+
+    for (var i=3; i<children.length; i++) {
+      $(children[i]).toggle();
+    }
+
+    return false;
+  }
+
+  toggleRecentPosts(".blog");
+  toggleRecentPosts(".projects");
+  toggleRecentPosts(".talks");
+
+  $(".blogtoggle").click(function() { return toggleRecentPosts(".blog"); });
+  $(".projectstoggle").click(function() { return toggleRecentPosts(".projects"); });
+  $(".talkstoggle").click(function() { return toggleRecentPosts(".talks"); });
+</script>
