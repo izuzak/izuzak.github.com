@@ -128,7 +128,10 @@ After successfully using UrlEcho for over a year, I noticed it stopped working f
 Turns out, using UrlEcho for **echoing back HTML documents with JavaScript scripts makes browsers think there is an XSS attack happening**.
 For example, the following URL (clickable link <a href="http://urlecho.appspot.com/echo?status=200&Content-Type=text%2Fhtml&body=%3Chtml%3E%0A%20%20%3Chead%3E%0A%20%20%3C%2Fhead%3E%0A%20%20%3Cbody%3E%0A%20%20%20%20%3Cscript%3E%0A%20%20%20%20%20%20console.log(%22Hello%20world!%22)%3B%0A%20%20%20%20%3C%2Fscript%3E%0A%20%20%3C%2Fbody%3E%0A%3C%2Fhead%3E">here</a>):
 
-	http://urlecho.appspot.com/echo?status=200&Content-Type=text%2Fhtml&body=%3Chtml%3E%0A%20%20%3Chead%3E%0A%20%20%3C%2Fhead%3E%0A%20%20%3Cbody%3E%0A%20%20%20%20%3Cscript%3E%0A%20%20%20%20%20%20console.log(%22Hello%20world!%22)%3B%0A%20%20%20%20%3C%2Fscript%3E%0A%20%20%3C%2Fbody%3E%0A%3C%2Fhead%3E
+	http://urlecho.appspot.com/echo?status=200&Content-Type=text%2Fhtml&body=%3Chtml%3E%0A%20%20%3C
+	head%3E%0A%20%20%3C%2Fhead%3E%0A%20%20%3Cbody%3E%0A%20%20%20%20%3Cscript%3E%0A%20%20%20%20%20%20
+	console.log(%22Hello%20world!%22)%3B%0A%20%20%20%20%3C%2Fscript%3E%0A%20%20%3C%2Fbody%3E%0A%3C%2F
+	head%3E
 
 echoes back a simple HTML document with a `console.log("Hello world!")` script.
 However, the script will not get executed and Chrome will log the following error to the console: *"Refused to execute a JavaScript script. Source code of script found within request."*
