@@ -45,7 +45,8 @@ On the other hand, requests to the UrlReq service should contain the **definitio
 Upon receiving the request, UrlReq performs the request defined in the URL, and forwards the received response back to the requestor.
 Here's an example request URL for requesting HTML rendering of Markdown input using GitHub's API (clickable link [here](http://urlreq.appspot.com/req?method=POST&url=https%3A%2F%2Fapi.github.com%2Fmarkdown%2Fraw&Content-Type=text%2Fplain&body=**Hello**%20_World_!)):
 
-	http://urlreq.appspot.com/req?method=POST&url=https%3A%2F%2Fapi.github.com%2Fmarkdown%2Fraw&Content-Type=text%2Fplain&body=**Hello**%20_World_!
+	http://urlreq.appspot.com/req?method=POST&url=https%3A%2F%2Fapi.github.com%2Fmarkdown%2Fraw&
+	Content-Type=text%2Fplain&body=**Hello**%20_World_!
 
 the corresponding HTTP request hosted in the URL:
 
@@ -78,7 +79,7 @@ where the strings for header names and values, for the target URL, and for the b
 
 To make the construction of such URLs easier, simple **URL builder forms** are available for both services: [UrlEcho URL builder](http://izuzak.github.com/urlecho) and [UrlReq URL builder](http://izuzak.github.com/urlreq) (scroll down when you get to the project page).
 
-<img class="aligncenter" title="UrlEcho URL builder" src="http://ivanzuzak.info/images/urlecho/urlbuilder.png" alt="" width="80%" />
+<img class="aligncenter" title="UrlEcho URL builder" src="http://ivanzuzak.info/images/urlecho/urlbuilder.png" alt="" width="40%" />
 
 Also, both services have support for **debug mode** by appending `&debugMode=1` to the end of the URLs.
 When in debug mode, the services return a `text/plain` version of the HTTP response that would be returned if the service was not in debug mode.
