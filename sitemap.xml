@@ -179,12 +179,17 @@
       <priority>0.6400</priority>
    </url>
    <url>
-      <loc>http://ivanzuzak.info/FRISCjs/main.html</loc>
+      <loc>http://ivanzuzak.info/urlreq/</loc>
       <changefreq>daily</changefreq>
       <priority>0.6400</priority>
    </url>
    <url>
-      <loc>http://ivanzuzak.info/cro_lotto_analysis/index.html</loc>
+      <loc>http://ivanzuzak.info/FRISCjs/webapp/</loc>
+      <changefreq>daily</changefreq>
+      <priority>0.6400</priority>
+   </url>
+   <url>
+      <loc>http://ivanzuzak.info/cro_lotto_analysis/</loc>
       <changefreq>daily</changefreq>
       <priority>0.6400</priority>
    </url>
