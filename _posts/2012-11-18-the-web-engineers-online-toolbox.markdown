@@ -23,7 +23,7 @@ I didn't categorize the tools in the list since many tools may be used in many p
 
 Want to suggest a new tool or help me write better short descriptions of the tools? Add a comment below or make a [pull request](https://github.com/izuzak/izuzak.github.com).
 
-**The Web engineer's online toolbox** *(last edited on May 18 2013)*
+**The Web engineer's online toolbox** *(last edited on July 18 2013)*
 
 * **[RequestBin](http://requestb.in/)**
   * Lets you create a URL that will collect requests made to it, then let you inspect them in a human-friendly way.
@@ -62,6 +62,8 @@ Want to suggest a new tool or help me write better short descriptions of the too
   * JSON validator.
 * **[Link checker](http://validator.w3.org/checklink)**
   * Extracts links (recursively) from a Web site and checks that no link is defined twice, that all the links are dereferenceable and warns about HTTP redirects.
+* **[Url Decode](http://urldecode.org/)** and **[Url Encode](http://urlencode.org/)
+  * URL decode and encode strings.
 * **[Host tracker](http://www.host-tracker.com/)**
   * Website monitoring service with distributed ping/trace check, periodic monitoring, email/sms/IM notifications and statistics.
   * Similar tools: [Down for everyone or just me](http://www.downforeveryoneorjustme.com/), [Pingdom ping service](http://tools.pingdom.com/ping/), [IsItUp](http://isitup.org/), [Ping brigade](https://www.pingbrigade.com/).
