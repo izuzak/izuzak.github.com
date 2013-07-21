@@ -34,7 +34,7 @@ Want to suggest a new tool or help me write better short descriptions of the too
   * A proxy for inspecting API calls, providing several features of Hurl and RequestBin.
 * **[httpbin](http://httpbin.org/)**
   * A HTTP request & response service that covers all kinds of HTTP scenarios (e.g. different HTTP verbs, status codes and redirects).
-  * Similar tools: [Mock Response](http://mock.isssues.com/), [Hang](http://hang.nodester.com/), [UrlEcho](http://ivanzuzak.info/urlecho/), [Mocky](http://www.mocky.io/).
+  * Similar tools: [httpstat.us](http://httpstat.us/), [Mock Response](http://mock.isssues.com/), [Hang](http://hang.nodester.com/), [UrlEcho](http://ivanzuzak.info/urlecho/), [Mocky](http://www.mocky.io/).
 * **[REDbot](http://redbot.org/)**
   * A robot that checks HTTP resources to see how they'll behave, pointing out common problems and suggesting improvements.
   * Similar tools: [HTTP lint](http://zamez.org/httplint).
