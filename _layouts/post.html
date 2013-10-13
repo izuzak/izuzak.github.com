@@ -55,7 +55,7 @@ layout: default
     }
   }
 
-  $.ajax("https://api.github.com/repos/izuzak/izuzak.github.com/issues/{{page.commentIssueId}}/comments", {
+  $.ajax("https://api.github.com/repos/izuzak/izuzak.github.com/issues/{{page.commentIssueId}}/comments?per_page=100", {
     headers: {Accept: "application/vnd.github.full+json"},
     dataType: "json",
     success: function(msg){
