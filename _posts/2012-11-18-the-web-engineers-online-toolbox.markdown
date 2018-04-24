@@ -86,6 +86,8 @@ Want to suggest a new tool or help me write better short descriptions of the too
   * Similar tools: [Web page test](http://www.webpagetest.org/).
 * **[Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights)**
   * Analyzes the content of a web page, then generates suggestions to make that page faster.
+* **[Dotcom-Tools Website Speed Test](https://www.dotcom-tools.com/website-speed-test.aspx)**
+  * Test your website speed from 25 locations worldwide.
 * **[HAR viewer](http://www.softwareishard.com/har/viewer/)**
   * Visualizes HTTP Archive (HAR) log files created by HTTP tracking tools.
 * **[PCAP Web Performance Analyzer](http://pcapperf.appspot.com/)**
