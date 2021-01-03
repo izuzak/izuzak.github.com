@@ -15,7 +15,7 @@ The requirements for a tool to make the list are:
 * and must be useful to Web engineers (not just for Web site design)
 
 The current version of the list is shown below and is based on tools which I use or have used.
-Two of my personal favorites are [RequestBin](http://requestbin.com/) and Hurl (https://hoppscotch.io/) which I use regularly for almost every project.
+Two of my personal favorites are [RequestBin](http://requestbin.com/) and Hurl (https://github.com/defunkt/hurl) which I use regularly for almost every project.
 A few of the tools I haven't used in real projects but just played with them and thought they were really cool.
 
 Since I've probably forgotten some excellent tools, and because new tools will be made in the future - the list will be a "live list", updated as the set of available tools changes.
