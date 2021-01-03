@@ -15,7 +15,7 @@ The requirements for a tool to make the list are:
 * and must be useful to Web engineers (not just for Web site design)
 
 The current version of the list is shown below and is based on tools which I use or have used.
-Two of my personal favorites are [RequestBin](http://requestbin.com/) and [Hurl](http://hurl.it) which I use regularly for almost every project.
+Two of my personal favorites are [RequestBin](http://requestbin.com/) and Hurl (https://github.com/defunkt/hurl) which I use regularly for almost every project.
 A few of the tools I haven't used in real projects but just played with them and thought they were really cool.
 
 Since I've probably forgotten some excellent tools, and because new tools will be made in the future - the list will be a "live list", updated as the set of available tools changes.
@@ -28,8 +28,8 @@ Want to suggest a new tool or help me write better short descriptions of the too
 * **[RequestBin](http://requestbin.com/)**
   * Lets you create a URL that will collect requests made to it, then let you inspect them in a human-friendly way.
   * Note: the original hosted version of RequestBin, developed by Runscope, was taken down in 2018. The code repository remains online   at  [https://github.com/Runscope/requestbin](https://github.com/Runscope/requestbin).
-* **[Hurl](http://hurl.it)**
-  * Makes HTTP requests. Enter a URL, set some headers, view the response, then share it with others.
+* **[Hoppscotch](https://hoppscotch.io/)**
+  * Makes HTTP requests. Enter a URL, set some headers, view the response.
   * Similar tools: [REST test test](http://resttesttest.com/), [Apigee console](https://apigee.com/console/others), [Web-Sniffer](http://web-sniffer.net/).
 * **[Runscope](https://www.runscope.com/)**
   * A proxy for inspecting API calls, providing several features of Hurl and RequestBin.
@@ -116,3 +116,5 @@ Want to suggest a new tool or help me write better short descriptions of the too
 * **[About My Browser](https://aboutmybrowser.com/?nr)**
   * Extracts and displays browser info (browser, version, OS, cookies, JS, screen resolution, etc) and stores this info as a shareable Web page.
   * Similar tools: [http://browserspy.dk/](http://browserspy.dk/), [SupportDetails](http://supportdetails.com/)
+* **[ExtendsClass](https://extendsclass.com/)**
+  * Provides random data generators (JSON, CSV, SQL), database playgrounds (MySQL, SQLite, PostgreSQL, SQL Server), code testers (PHP, Java), API tools (REST/SOAP clients, Mock, JSON storage), ...
